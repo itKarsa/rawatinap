@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD086918-FDC6-4FB5-A379-FA3B96C5E1E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Rawat_Inap.My.MyApplication</StartupObject>
+    <RootNamespace>Rawat_Inap</RootNamespace>
+    <AssemblyName>Rawat Inap</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\simrs_02\New folder\kelengkapan Pengembangan\_NEW SIMRS 2019\APPS\Publish\APP Rawat Inap\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\simrs_02\New folder\kelengkapan Pengembangan\_NEW SIMRS 2019\APPS\Publish\APP Rawat Inap\</InstallUrl>
+    <UpdateUrl>\\simrs_02\New folder\kelengkapan Pengembangan\_NEW SIMRS 2019\APPS\Publish\APP Rawat Inap\</UpdateUrl>
+    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Rawat Inap.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Rawat Inap.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8686D54BE64A93F4F6934F4EDC1ADE5A929F777A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Rawat Inap_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ic_hospital.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="NotiButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NotiButton.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.RtfToHtml, Version=7.6.6.17, Culture=neutral, PublicKeyToken=c666a5e96a3d5457, processorArchitecture=MSIL">
+      <HintPath>..\packages\sautinsoft.rtftohtml.7.6.6.17\lib\net461\SautinSoft.RtfToHtml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.25\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Net" />
+    <Import Include="System.Net.Http" />
+    <Import Include="System.Net.Sockets" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BankDarah.Designer.vb">
+      <DependentUpon>BankDarah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BankDarah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CetakHasil.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CetakHasil.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CetakHasil.vb">
+      <DependentUpon>CetakHasil.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.Designer.vb">
+      <DependentUpon>Checkout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar Bukti Layanan.Designer.vb">
+      <DependentUpon>Daftar Bukti Layanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar Bukti Layanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar ICD10.Designer.vb">
+      <DependentUpon>Daftar ICD10.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar ICD10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar Kamar.Designer.vb">
+      <DependentUpon>Daftar Kamar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar Kamar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar ObatAlkes.Designer.vb">
+      <DependentUpon>Daftar ObatAlkes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar ObatAlkes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar Pasien.Designer.vb">
+      <DependentUpon>Daftar Pasien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar Pasien.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar Registrasi.Designer.vb">
+      <DependentUpon>Daftar Registrasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar Registrasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar Tenaga Medis.Designer.vb">
+      <DependentUpon>Daftar Tenaga Medis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar Tenaga Medis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar Tindakan Perawatan.Designer.vb">
+      <DependentUpon>Daftar Tindakan Perawatan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar Tindakan Perawatan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daftar Unit Pelayanan.Designer.vb">
+      <DependentUpon>Daftar Unit Pelayanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Daftar Unit Pelayanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaftarHasilLab.Designer.vb">
+      <DependentUpon>DaftarHasilLab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarHasilLab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaftarHasilPA.Designer.vb">
+      <DependentUpon>DaftarHasilPA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarHasilPA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTindakan.Designer.vb">
+      <DependentUpon>FormTindakan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTindakan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gizi.Designer.vb">
+      <DependentUpon>Gizi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gizi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hasil Lab.Designer.vb">
+      <DependentUpon>Hasil Lab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hasil Lab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hasil Rad.Designer.vb">
+      <DependentUpon>Hasil Rad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hasil Rad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hemodialisa.Designer.vb">
+      <DependentUpon>Hemodialisa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hemodialisa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info Biaya Perawatan.Designer.vb">
+      <DependentUpon>Info Biaya Perawatan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Info Biaya Perawatan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Isi Diagnosa.Designer.vb">
+      <DependentUpon>Isi Diagnosa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Isi Diagnosa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KomponenDarah.Designer.vb">
+      <DependentUpon>KomponenDarah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KomponenDarah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Koneksi.vb" />
+    <Compile Include="Laboratorium.Designer.vb">
+      <DependentUpon>Laboratorium.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laboratorium.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Diet.Designer.vb">
+      <DependentUpon>Menu Diet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Diet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myGroupBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShapedPanel.Designer.vb">
+      <DependentUpon>ShapedPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShapedPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Obat Racikan.Designer.vb">
+      <DependentUpon>Obat Racikan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Obat Racikan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OKParu.Designer.vb">
+      <DependentUpon>OKParu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OKParu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operasi.Designer.vb">
+      <DependentUpon>Operasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Operasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasienCovid.Designer.vb">
+      <DependentUpon>PasienCovid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PasienCovid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patologi.Designer.vb">
+      <DependentUpon>Patologi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Patologi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pindah Kamar.Designer.vb">
+      <DependentUpon>Pindah Kamar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pindah Kamar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Radiologi.Designer.vb">
+      <DependentUpon>Radiologi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Radiologi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rawat Inap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rawat Inap.Designer.vb">
+      <DependentUpon>Rawat Inap.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resep Dokter.Designer.vb">
+      <DependentUpon>Resep Dokter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resep Dokter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ruangan.Designer.vb">
+      <DependentUpon>Ruangan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ruangan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tes.Designer.vb">
+      <DependentUpon>Tes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransfusiDarah.Designer.vb">
+      <DependentUpon>TransfusiDarah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransfusiDarah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventilator.Designer.vb">
+      <DependentUpon>Ventilator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventilator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCetakLIS.Designer.vb">
+      <DependentUpon>ViewCetakLIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCetakLIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewHasilPA.Designer.vb">
+      <DependentUpon>ViewHasilPA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHasilPA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BankDarah.resx">
+      <DependentUpon>BankDarah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cetakhasilis.rdlc" />
+    <EmbeddedResource Include="cetakhasilpa.rdlc" />
+    <EmbeddedResource Include="cetakhasilrad.rdlc" />
+    <EmbeddedResource Include="CetakRincian.rdlc" />
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar Bukti Layanan.resx">
+      <DependentUpon>Daftar Bukti Layanan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar ICD10.resx">
+      <DependentUpon>Daftar ICD10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar Kamar.resx">
+      <DependentUpon>Daftar Kamar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar ObatAlkes.resx">
+      <DependentUpon>Daftar ObatAlkes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar Pasien.resx">
+      <DependentUpon>Daftar Pasien.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar Registrasi.resx">
+      <DependentUpon>Daftar Registrasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar Tenaga Medis.resx">
+      <DependentUpon>Daftar Tenaga Medis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar Tindakan Perawatan.resx">
+      <DependentUpon>Daftar Tindakan Perawatan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Daftar Unit Pelayanan.resx">
+      <DependentUpon>Daftar Unit Pelayanan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaftarHasilLab.resx">
+      <DependentUpon>DaftarHasilLab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaftarHasilPA.resx">
+      <DependentUpon>DaftarHasilPA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTindakan.resx">
+      <DependentUpon>FormTindakan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gizi.resx">
+      <DependentUpon>Gizi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hasil Lab.resx">
+      <DependentUpon>Hasil Lab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hasil Rad.resx">
+      <DependentUpon>Hasil Rad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hemodialisa.resx">
+      <DependentUpon>Hemodialisa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info Biaya Perawatan.resx">
+      <DependentUpon>Info Biaya Perawatan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Isi Diagnosa.resx">
+      <DependentUpon>Isi Diagnosa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KomponenDarah.resx">
+      <DependentUpon>KomponenDarah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laboratorium.resx">
+      <DependentUpon>Laboratorium.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Diet.resx">
+      <DependentUpon>Menu Diet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myGroupBox.resx">
+      <DependentUpon>myGroupBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShapedPanel.resx">
+      <DependentUpon>ShapedPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obat Racikan.resx">
+      <DependentUpon>Obat Racikan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OKParu.resx">
+      <DependentUpon>OKParu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operasi.resx">
+      <DependentUpon>Operasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasienCovid.resx">
+      <DependentUpon>PasienCovid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patologi.resx">
+      <DependentUpon>Patologi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pindah Kamar.resx">
+      <DependentUpon>Pindah Kamar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Radiologi.resx">
+      <DependentUpon>Radiologi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rawat Inap.resx">
+      <DependentUpon>Rawat Inap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resep Dokter.resx">
+      <DependentUpon>Resep Dokter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ruangan.resx">
+      <DependentUpon>Ruangan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tes.resx">
+      <DependentUpon>Tes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransfusiDarah.resx">
+      <DependentUpon>TransfusiDarah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventilator.resx">
+      <DependentUpon>Ventilator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCetakLIS.resx">
+      <DependentUpon>ViewCetakLIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewHasilPA.resx">
+      <DependentUpon>ViewHasilPA.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CetakHasil.xsc">
+      <DependentUpon>CetakHasil.xsd</DependentUpon>
+    </None>
+    <None Include="CetakHasil.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CetakHasil.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="CetakHasil.xss">
+      <DependentUpon>CetakHasil.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Rawat Inap_1_TemporaryKey.pfx" />
+    <None Include="Rawat Inap_TemporaryKey.pfx" />
+    <None Include="Resources\ic_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popup_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBlue.bmp" />
+    <None Include="Resources\btn_blue.png" />
+    <None Include="Resources\btn_bluev2.png" />
+    <None Include="Resources\ic_hospital.png" />
+    <Content Include="ic_hospital.ico" />
+    <None Include="Resources\ic_instalasi.png" />
+    <None Include="Resources\ic_instalasiV2.png" />
+    <None Include="Resources\logo rskh.png" />
+    <None Include="Resources\bin.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\Processing.png" />
+    <None Include="Resources\Complete.png" />
+    <None Include="Resources\Order.png" />
+    <None Include="Resources\opOrder.png" />
+    <None Include="Resources\opRecovery.png" />
+    <None Include="Resources\opRegister.png" />
+    <None Include="Resources\opSelesai.png" />
+    <None Include="Resources\opAnestesi.png" />
+    <None Include="Resources\opOperasi.png" />
+    <None Include="Resources\History.png" />
+    <None Include="Resources\okAnestesi.png" />
+    <None Include="Resources\okOperasi.png" />
+    <None Include="Resources\okOrder.png" />
+    <None Include="Resources\okRecovery.png" />
+    <None Include="Resources\okRegister.png" />
+    <None Include="Resources\okSelesai.png" />
+    <None Include="Resources\magnifying-glass green2.png" />
+    <None Include="Resources\magnifying-glass green3.png" />
+    <None Include="Resources\magnifying-glass.png" />
+    <None Include="Resources\signs 2.png" />
+    <None Include="Resources\btn_green.png" />
+    <None Include="Resources\btn_greenv2.png" />
+    <None Include="Resources\PAProcessing.png" />
+    <None Include="Resources\PAComplete.png" />
+    <None Include="Resources\PAOrder.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
