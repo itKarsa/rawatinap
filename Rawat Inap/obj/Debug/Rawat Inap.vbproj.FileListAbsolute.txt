@@ -349,3 +349,127 @@ E:\NEW SIMRS\Rawat Inap\Rawat Inap\obj\Debug\Rawat Inap.vbproj.CopyComplete
 E:\NEW SIMRS\Rawat Inap\Rawat Inap\obj\Debug\RdlCompile.cache
 E:\NEW SIMRS\Rawat Inap\Rawat Inap\obj\Debug\RdlCompile.compiled
 E:\NEW SIMRS\Rawat Inap\Rawat Inap\obj\Debug\Rawat_Inap.Ventilator.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Rawat Inap.exe.config
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Rawat Inap.exe.manifest
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Rawat Inap.application
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Rawat Inap.exe
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Rawat Inap.pdb
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Rawat Inap.xml
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\SautinSoft.RtfToHtml.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\System.ValueTuple.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\EnvDTE.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\stdole.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\Microsoft.MSXML.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\SautinSoft.RtfToHtml.xml
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\System.ValueTuple.xml
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.vbprojAssemblyReference.cache
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.vbproj.ResolveComReference.cache
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.BankDarah.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Checkout.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_Bukti_Layanan.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_ICD10.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_Kamar.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_ObatAlkes.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_Pasien.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_Registrasi.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_Tenaga_Medis.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_Tindakan_Perawatan.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Daftar_Unit_Pelayanan.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.DaftarHasilLab.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.DaftarHasilPA.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.FormTindakan.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Gizi.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Hasil_Lab.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Hasil_Rad.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Hemodialisa.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Info_Biaya_Perawatan.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Isi_Diagnosa.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.KomponenDarah.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Laboratorium.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.LoginForm.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Menu_Diet.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.myGroupBox.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.ShapedPanel.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Obat_Racikan.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.OKParu.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Operasi.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.PasienCovid.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Patologi.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Pindah_Kamar.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Radiologi.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Form1.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Resources.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Resep_Dokter.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Ruangan.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.SplashScreen.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Tes.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.TransfusiDarah.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.Ventilator.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.ViewCetakLIS.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat_Inap.ViewHasilPA.resources
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.vbproj.GenerateResource.cache
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\RdlCompile.cache
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\RdlCompile.compiled
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.vbproj.CoreCompileInputs.cache
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.exe.manifest
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.application
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.vbproj.CopyComplete
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.exe
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.xml
+C:\Users\sirs_rhesal\Documents\GitHub\rawatinap\Rawat Inap\obj\Debug\Rawat Inap.pdb

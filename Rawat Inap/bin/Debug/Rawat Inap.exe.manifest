@@ -703,14 +703,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rawat Inap.exe" size="2170840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rawat Inap.exe" size="2173912">
       <assemblyIdentity name="Rawat Inap" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zMFD4NXTNZK7l/n7W7zTFy6cAV2WX6CaQXyYjHAeavU=</dsig:DigestValue>
+        <dsig:DigestValue>0+RjtTkBRqfKqJAeVgc9tZQNZzDOlxrBthkfJc/hONA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

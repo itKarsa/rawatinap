@@ -143,7 +143,7 @@ Public Class Gizi
                      FROM vw_daftarpermintaangizi
                     WHERE (SUBSTR(tglPermintaan,1,10) BETWEEN '" & Format(dateFilter.Value, "yyyy-MM-dd") & "' AND
                           '" & Format(DateAdd(DateInterval.Day, 1, dateFilter2.Value), "yyyy-MM-dd") & "')
-                      AND nmPasien = '" & txtFilterPasien.Text & "'
+                      AND noDaftar = '" & txtFilterPasien.SelectedValue.ToString & "'
                     ORDER BY nmPasien ASC, tglPermintaan ASC"
         End If
 
@@ -243,7 +243,6 @@ Public Class Gizi
 	                                reg.noDaftar = rri.noDaftar AND
 	                                reg.kdTenagaMedis = dok.kdPetugasMedis AND
 	                                rri.noDaftarRawatInap = '" & noRegRanap & "'"
-                    MsgBox("Tes2")
                 ElseIf row.Cells(11).Value.ToString = "PASIEN CHECKOUT" Then
                     sql = "SELECT px.nmPasien,px.jenisKelamin,px.tglLahir,
 	                                dok.namaPetugasMedis 
@@ -253,7 +252,6 @@ Public Class Gizi
 	                                reg.noDaftar = rri.noDaftar AND
 	                                reg.kdTenagaMedis = dok.kdPetugasMedis AND
 	                                rri.noDaftarRawatInap = '" & noRegRanap & "'"
-                    MsgBox("Tes3")
                 End If
             Next
         ElseIf cek = "DaftarPasien" Then
@@ -276,12 +274,35 @@ Public Class Gizi
             dr = cmd.ExecuteReader
             dr.Read()
             If dr.HasRows Then
-                txtNama.Text = dr.Item("nmPasien").ToString
-                txtJk.Text = dr.Item("jenisKelamin").ToString
-                txtTglLahir.Text = dr.Item("tglLahir").ToString
-                txtDokter.Text = dr.Item("namapetugasMedis").ToString
-                txtTglMasuk.Text = dr.Item("tglMasukRawatInap").ToString
-                txtKdRanap.Text = dr.Item("kode").ToString
+                If cek = "RiwayatPasien" Then
+                    For Each row As DataGridViewRow In DataGridView2.SelectedRows
+                        If row.Cells(11).Value.ToString = "KONDISI SEKARANG" Then
+                            txtNama.Text = dr.Item("nmPasien").ToString
+                            txtJk.Text = dr.Item("jenisKelamin").ToString
+                            txtTglLahir.Text = dr.Item("tglLahir").ToString
+                            txtDokter.Text = dr.Item("namapetugasMedis").ToString
+                            txtTglMasuk.Text = dr.Item("tglMasukRawatInap").ToString
+                            txtKdRanap.Text = dr.Item("kode").ToString
+                        ElseIf row.Cells(11).Value.ToString = "KONDISI LAMA" Then
+                            txtNama.Text = dr.Item("nmPasien").ToString
+                            txtJk.Text = dr.Item("jenisKelamin").ToString
+                            txtTglLahir.Text = dr.Item("tglLahir").ToString
+                            txtDokter.Text = dr.Item("namapetugasMedis").ToString
+                        ElseIf row.Cells(11).Value.ToString = "PASIEN CHECKOUT" Then
+                            txtNama.Text = dr.Item("nmPasien").ToString
+                            txtJk.Text = dr.Item("jenisKelamin").ToString
+                            txtTglLahir.Text = dr.Item("tglLahir").ToString
+                            txtDokter.Text = dr.Item("namapetugasMedis").ToString
+                        End If
+                    Next
+                ElseIf cek = "DaftarPasien" Then
+                    txtNama.Text = dr.Item("nmPasien").ToString
+                    txtJk.Text = dr.Item("jenisKelamin").ToString
+                    txtTglLahir.Text = dr.Item("tglLahir").ToString
+                    txtDokter.Text = dr.Item("namapetugasMedis").ToString
+                    txtTglMasuk.Text = dr.Item("tglMasukRawatInap").ToString
+                    txtKdRanap.Text = dr.Item("kode").ToString
+                End If
             End If
             dr.Close()
             conn.Close()
@@ -503,9 +524,9 @@ Public Class Gizi
         Dim cmd As MySqlCommand
         Dim da As MySqlDataAdapter
 
-        cmd = New MySqlCommand("SELECT 'ALL' AS nmPasien
+        cmd = New MySqlCommand("SELECT 'ALL' AS nmPasien,'-' AS noDaftar 
                                 UNION ALL
-                                SELECT px.nmPasien
+                                SELECT px.nmPasien,rri.noDaftar
                                   FROM t_pasien px, t_registrasi reg, t_registrasirawatinap rri
                                  WHERE px.noRekamedis = reg.noRekamedis AND
 	                                   reg.noDaftar = rri.noDaftar AND
@@ -517,9 +538,9 @@ Public Class Gizi
 
         txtFilterPasien.DataSource = dt
         txtFilterPasien.DisplayMember = "nmPasien"
-        txtFilterPasien.ValueMember = "nmPasien"
-        txtFilterPasien.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-        txtFilterPasien.AutoCompleteSource = AutoCompleteSource.ListItems
+        txtFilterPasien.ValueMember = "noDaftar"
+        'txtFilterPasien.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        'txtFilterPasien.AutoCompleteSource = AutoCompleteSource.ListItems
         conn.Close()
     End Sub
 
@@ -1010,8 +1031,17 @@ Public Class Gizi
         bentuk = DataGridView2.Rows(e.RowIndex).Cells(14).Value.ToString
         kelas = DataGridView2.Rows(e.RowIndex).Cells(15).Value.ToString
 
+        For Each row As DataGridViewRow In DataGridView2.SelectedRows
+            If row.Cells(11).Value.ToString = "KONDISI SEKARANG" Then
+                txtNoReg.Text = noDaftarRawatInap
+            ElseIf row.Cells(11).Value.ToString = "KONDISI LAMA" Then
+                txtNoReg.Text = txtNoReg.Text
+            ElseIf row.Cells(11).Value.ToString = "PASIEN CHECKOUT" Then
+                txtNoReg.Text = txtNoReg.Text
+            End If
+        Next
+
         txtKdPermintaanLama.Text = kdPermintaan
-        txtNoReg.Text = noDaftarRawatInap
         txtNama.Text = nmPasien
         txtAlergi.Text = kdAlergi
         txtDiagGizi.Text = diagnosaGizi
@@ -1392,10 +1422,45 @@ Public Class Gizi
 
     Private Sub btnTampil_Click(sender As Object, e As EventArgs) Handles btnTampil.Click
         Call filterPermintaan()
+
+        If txtFilterPasien.Text = "ALL" Then
+            Return
+        Else
+            Call koneksiServer()
+            Try
+                Dim query As String
+                query = "SELECT noDaftarRawatInap,kdRawatInap
+                           FROM t_registrasirawatinap
+                          WHERE noDaftar = '" & txtFilterPasien.SelectedValue.ToString & "'
+                       ORDER BY tglMasukRawatInap DESC LIMIT 1"
+
+                cmd = New MySqlCommand(query, conn)
+                dr = cmd.ExecuteReader
+
+                While dr.Read
+                    txtNoReg.Text = UCase(dr.GetString("noDaftarRawatInap"))
+                    txtKdRanap.Text = UCase(dr.GetString("kdRawatInap"))
+                End While
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+            conn.Close()
+        End If
+
     End Sub
 
     Private Sub txtFilterPasien_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtFilterPasien.SelectedIndexChanged
-        Call filterPermintaan()
+
+    End Sub
+
+    Private Sub btnTampil_MouseLeave(sender As Object, e As EventArgs) Handles btnTampil.MouseLeave
+        Me.btnTampil.BackColor = Color.FromArgb(232, 243, 239)
+        Me.btnTampil.ForeColor = Color.FromArgb(26, 141, 95)
+    End Sub
+
+    Private Sub btnTampil_MouseEnter(sender As Object, e As EventArgs) Handles btnTampil.MouseEnter
+        Me.btnTampil.BackColor = Color.FromArgb(26, 141, 95)
+        Me.btnTampil.ForeColor = Color.FromArgb(232, 243, 239)
     End Sub
 
     Private Sub DataGridView1_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles DataGridView1.RowPostPaint
@@ -1622,6 +1687,38 @@ Public Class Gizi
     Private Sub txtKelas_LostFocus(sender As Object, e As EventArgs) Handles txtKelas.LostFocus
         If txtKelas.Text = "-" Then
             MsgBox("Pilih kelas terlebih dahulu  !!!", MsgBoxStyle.Information)
+        End If
+    End Sub
+
+    Private Sub txtFilterPasien_ValueMemberChanged(sender As Object, e As EventArgs) Handles txtFilterPasien.ValueMemberChanged
+
+
+    End Sub
+
+    Private Sub txtFilterPasien_SelectedValueChanged(sender As Object, e As EventArgs) Handles txtFilterPasien.SelectedValueChanged
+        Call filterPermintaan()
+
+        If txtFilterPasien.Text = "ALL" Then
+            Return
+        Else
+            Call koneksiServer()
+            Try
+                Dim query As String
+                query = "SELECT noDaftarRawatInap,kdRawatInap
+                           FROM t_registrasirawatinap
+                          WHERE noDaftar = '" & txtFilterPasien.SelectedValue.ToString & "'
+                       ORDER BY tglMasukRawatInap DESC LIMIT 1"
+                cmd = New MySqlCommand(query, conn)
+                dr = cmd.ExecuteReader
+
+                While dr.Read
+                    txtNoReg.Text = UCase(dr.GetString("noDaftarRawatInap"))
+                    txtKdRanap.Text = UCase(dr.GetString("kdRawatInap"))
+                End While
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+            conn.Close()
         End If
     End Sub
 End Class

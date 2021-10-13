@@ -502,6 +502,7 @@ Partial Class Gizi
         Me.txtKdPermintaanLama.Size = New System.Drawing.Size(142, 16)
         Me.txtKdPermintaanLama.TabIndex = 49
         Me.txtKdPermintaanLama.Text = "KdPermintaanLama"
+        Me.txtKdPermintaanLama.Visible = False
         '
         'Label5
         '
@@ -640,6 +641,7 @@ Partial Class Gizi
         Me.txtKdPermintaan.Size = New System.Drawing.Size(104, 16)
         Me.txtKdPermintaan.TabIndex = 18
         Me.txtKdPermintaan.Text = "KdPermintaan"
+        Me.txtKdPermintaan.Visible = False
         '
         'txtKdKelas
         '
@@ -674,6 +676,7 @@ Partial Class Gizi
         Me.txtKdRanap.Size = New System.Drawing.Size(72, 16)
         Me.txtKdRanap.TabIndex = 32
         Me.txtKdRanap.Text = "KdRanap"
+        Me.txtKdRanap.Visible = False
         '
         'txtKdAhliGizi
         '
@@ -685,6 +688,7 @@ Partial Class Gizi
         Me.txtKdAhliGizi.Size = New System.Drawing.Size(78, 16)
         Me.txtKdAhliGizi.TabIndex = 31
         Me.txtKdAhliGizi.Text = "KdAhliGizi"
+        Me.txtKdAhliGizi.Visible = False
         '
         'Label27
         '
