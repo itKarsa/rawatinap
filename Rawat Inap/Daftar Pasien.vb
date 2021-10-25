@@ -1335,6 +1335,16 @@ Public Class Daftar_Pasien
                 DataGridView3.Rows(i).DefaultCellStyle.BackColor = Color.WhiteSmoke
             End If
         Next
+
+        For i As Integer = 0 To DataGridView3.Rows.Count - 1
+            If DataGridView3.Rows(i).Cells(10).Value.ToString = "Di Rawat Inap" Then
+                DataGridView3.Rows(i).Cells(10).Style.BackColor = Color.FromArgb(26, 141, 95)
+                DataGridView3.Rows(i).Cells(10).Style.ForeColor = Color.White
+            Else
+                DataGridView3.Rows(i).Cells(10).Style.BackColor = Color.Crimson
+                DataGridView3.Rows(i).Cells(10).Style.ForeColor = Color.White
+            End If
+        Next
     End Sub
 
     Private Sub DataGridView4_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView4.CellFormatting

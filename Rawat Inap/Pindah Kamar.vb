@@ -211,11 +211,11 @@ Public Class Pindah_Kamar
             Dim cmd As MySqlCommand
 
             Dim startTime As New TimeSpan(0, 0, 1)  '00:00:01 WIB
-            Dim endTime As New TimeSpan(12, 59, 59) '12:59:59 WIB
-            Dim midTime As New TimeSpan(13, 0, 0)   '13:00:00 WIB
+            Dim endTime As New TimeSpan(11, 59, 59) '12:59:59 WIB
+            Dim midTime As New TimeSpan(12, 0, 0)   '13:00:00 WIB
 
             If datePindah.Value.TimeOfDay >= startTime And datePindah.Value.TimeOfDay <= endTime Then
-                'MsgBox("tarif kamar baru")
+                'MsgBox("tarif kamar lama - 1 hari")
                 str = "INSERT INTO t_registrasirawatinap (noDaftarRawatInap,noDaftar,kdTarifKelasKmr,tglMasukRawatInap,
                                                       asalUnit,kdRawatInap,rawatInap,noKamar,noBed,tarifKmr,kelas) 
                                              VALUES ('" & txtPindahNoDaftarRanap.Text & "','" & txtNoDaftar.Text & "',
@@ -225,7 +225,7 @@ Public Class Pindah_Kamar
                                                      '" & txtPindahNoBed.Text & "','" & CDbl(txtPindahTarif.Text) & "',
                                                      '" & txtPindahKelas.Text & "')"
             ElseIf datePindah.Value.TimeOfDay >= midTime Then
-                'MsgBox("tarif kamar baru tambah 1 hari")
+                'MsgBox("tarif kamar baru + 1 hari")
                 str = "INSERT INTO t_registrasirawatinap (noDaftarRawatInap,noDaftar,kdTarifKelasKmr,tglMasukRawatInap,
                                                       asalUnit,kdRawatInap,rawatInap,noKamar,noBed,tarifKmr,kelas) 
                                              VALUES ('" & txtPindahNoDaftarRanap.Text & "','" & txtNoDaftar.Text & "',
@@ -249,14 +249,14 @@ Public Class Pindah_Kamar
     Sub updateRegRanap()
         Call koneksiServer()
         Try
-            Dim str As String
-            Dim cmd As MySqlCommand
-            str = "UPDATE t_registrasirawatinap SET tglKeluarRawatInap = '" & Format(datePindah.Value, "yyyy-MM-dd HH:mm:ss") & "',
+            Dim strRgnap As String
+            Dim cmdRgnap As MySqlCommand
+            strRgnap = "UPDATE t_registrasirawatinap SET tglKeluarRawatInap = '" & Format(datePindah.Value, "yyyy-MM-dd HH:mm:ss") & "',
                                                     jumlahHariMenginap = '" & txtJumHaper.Text & "', 
                                                     totalMenginap = '" & txtTotalTarif.Text & "' 
                                               WHERE noDaftarRawatInap = '" & txtNoDaftarRanap.Text & "'"
-            cmd = New MySqlCommand(str, conn)
-            cmd.ExecuteNonQuery()
+            cmdRgnap = New MySqlCommand(strRgnap, conn)
+            cmdRgnap.ExecuteNonQuery()
             'MessageBox.Show("Update data Reg Ranap berhasil dilakukan.")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -267,14 +267,14 @@ Public Class Pindah_Kamar
     Sub updateStatusKamarSebelum()
         Call koneksiServer()
         Try
-            Dim str As String
-            Dim cmd As MySqlCommand
-            str = "UPDATE t_tarifkelaskamar
+            Dim strStB As String
+            Dim cmdStB As MySqlCommand
+            strStB = "UPDATE t_tarifkelaskamar
                       SET kdStatusBed = 'st6'
                     WHERE kdTarifKelasKmr = '" & txtAwalKdTarifKmr.Text & "'"
 
-            cmd = New MySqlCommand(str, conn)
-            cmd.ExecuteNonQuery()
+            cmdStB = New MySqlCommand(strStB, conn)
+            cmdStB.ExecuteNonQuery()
             'MessageBox.Show("Update data status asal kamar berhasil dilakukan.")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -285,14 +285,14 @@ Public Class Pindah_Kamar
     Sub updateStatusKamarSesudah()
         Call koneksiServer()
         Try
-            Dim str As String
-            Dim cmd As MySqlCommand
-            str = "UPDATE t_tarifkelaskamar
+            Dim strStA As String
+            Dim cmdStA As MySqlCommand
+            strStA = "UPDATE t_tarifkelaskamar
                       SET kdStatusBed = 'st5'
                     WHERE kdTarifKelasKmr = '" & txtPindahKdTarifKmr.Text & "'"
 
-            cmd = New MySqlCommand(str, conn)
-            cmd.ExecuteNonQuery()
+            cmdStA = New MySqlCommand(strStA, conn)
+            cmdStA.ExecuteNonQuery()
             'MessageBox.Show("Update data status pindah kamar berhasil dilakukan.")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -303,15 +303,16 @@ Public Class Pindah_Kamar
     Sub updateCheckoutGizi(noRegRanap As String)
         Call koneksiGizi()
         Try
-            Dim str As String = ""
-            str = "UPDATE t_permintaan
+            Dim strCoG As String = ""
+            Dim cmdCoG As MySqlCommand
+            strCoG = "UPDATE t_permintaan
                       SET statusUpdate = '2', 
                           dateUpdate = '" & Format(datePindah.Value, "yyyy-MM-dd HH:mm:ss") & "',
                           userModify = CONCAT(userModify,';" & LoginForm.txtUsername.Text & "'),  
                           dateModify = CONCAT(dateModify,';" & Format(DateTime.Now, "yyyy-MM-dd HH:mm:ss") & "')
                     WHERE noDaftarRawatInap = '" & noRegRanap & "'"
-            cmd = New MySqlCommand(str, conn)
-            cmd.ExecuteNonQuery()
+            cmdCoG = New MySqlCommand(strCoG, conn)
+            cmdCoG.ExecuteNonQuery()
             'MsgBox("Pasien Checkout berhasil dilakukan", MessageBoxIcon.Information)
         Catch ex As Exception
             MsgBox("Pasien Checkout gagal dilakukan.", MessageBoxIcon.Error, "Error Update Kondisi")
@@ -361,15 +362,38 @@ Public Class Pindah_Kamar
         Dim masuk As Date = dateMasuk.Value.ToString("dd/MM/yyyy")
         Dim pulang As Date = datePindah.Value.ToString("dd/MM/yyyy")
 
+        Dim startTime As New TimeSpan(0, 0, 1)  '00:00:01 WIB
+        Dim endTime As New TimeSpan(11, 59, 59) '12:59:59 WIB
+        Dim midTime As New TimeSpan(12, 0, 0)   '13:00:00 WIB
+
         Dim hari As Integer
         hari = DateDiff(DateInterval.Day, masuk, pulang)
-        If Format(hari) = 0 Then
-            txtJumHaper.Text = 1
-        ElseIf Format(hari) < 0 Then
-            txtJumHaper.Text = 0
-        ElseIf Format(hari) > 0 Then
-            txtJumHaper.Text = hari + 1
+
+        If datePindah.Value.TimeOfDay >= startTime And datePindah.Value.TimeOfDay <= endTime Then
+            If Format(hari) = 0 Then
+                txtJumHaper.Text = 1
+            ElseIf Format(hari) < 0 Then
+                txtJumHaper.Text = 0
+            ElseIf Format(hari) > 0 Then
+                txtJumHaper.Text = hari
+            End If
+        ElseIf datePindah.Value.TimeOfDay >= midTime Then
+            If Format(hari) = 0 Then
+                txtJumHaper.Text = 1
+            ElseIf Format(hari) < 0 Then
+                txtJumHaper.Text = 0
+            ElseIf Format(hari) > 0 Then
+                txtJumHaper.Text = hari + 1
+            End If
         End If
+
+        'If Format(hari) = 0 Then
+        '    txtJumHaper.Text = 1
+        'ElseIf Format(hari) < 0 Then
+        '    txtJumHaper.Text = 0
+        'ElseIf Format(hari) > 0 Then
+        '    txtJumHaper.Text = hari + 1
+        'End If
     End Sub
 
     Private Sub Pindah_Kamar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -408,9 +432,9 @@ Public Class Pindah_Kamar
 
         txtJmlPindah.Text = cekJmlRuang(txtNoDaftar.Text)
         Call jumHaper()
-        If txtJmlPindah.Text > 1 Then
-            txtJumHaper.Text = Val(txtJumHaper.Text - 1)
-        End If
+        'If txtJmlPindah.Text > 1 Then
+        '    txtJumHaper.Text = Val(txtJumHaper.Text - 1)
+        'End If
         txtTotalTarif.Text = Val(txtTarifKmr.Text * txtJumHaper.Text)
 
         txtTarifKmr.Text = FormatNumber(txtTarifKmr.Text, 0)
@@ -507,9 +531,9 @@ Public Class Pindah_Kamar
             'txtJumHaper.Text = hitungHaper(inap)
             'txtTotalTarif.Text = Val(txtTarifKmr.Text * txtJumHaper.Text)
             Call jumHaper()
-            If txtJmlPindah.Text > 1 Then
-                txtJumHaper.Text = Val(txtJumHaper.Text - 1)
-            End If
+            'If txtJmlPindah.Text > 1 Then
+            '    txtJumHaper.Text = Val(txtJumHaper.Text - 1)
+            'End If
             txtTotalTarif.Text = Val(txtTarifKmr.Text * txtJumHaper.Text)
         End If
     End Sub

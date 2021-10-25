@@ -143,7 +143,7 @@ Public Class Gizi
                      FROM vw_daftarpermintaangizi
                     WHERE (SUBSTR(tglPermintaan,1,10) BETWEEN '" & Format(dateFilter.Value, "yyyy-MM-dd") & "' AND
                           '" & Format(DateAdd(DateInterval.Day, 1, dateFilter2.Value), "yyyy-MM-dd") & "')
-                      AND noDaftar = '" & txtFilterPasien.SelectedValue.ToString & "'
+                      AND nmPasien = '" & txtFilterPasien.Text & "'
                     ORDER BY nmPasien ASC, tglPermintaan ASC"
         End If
 
@@ -243,6 +243,7 @@ Public Class Gizi
 	                                reg.noDaftar = rri.noDaftar AND
 	                                reg.kdTenagaMedis = dok.kdPetugasMedis AND
 	                                rri.noDaftarRawatInap = '" & noRegRanap & "'"
+                    'MsgBox("Tes2")
                 ElseIf row.Cells(11).Value.ToString = "PASIEN CHECKOUT" Then
                     sql = "SELECT px.nmPasien,px.jenisKelamin,px.tglLahir,
 	                                dok.namaPetugasMedis 
@@ -252,6 +253,7 @@ Public Class Gizi
 	                                reg.noDaftar = rri.noDaftar AND
 	                                reg.kdTenagaMedis = dok.kdPetugasMedis AND
 	                                rri.noDaftarRawatInap = '" & noRegRanap & "'"
+                    'MsgBox("Tes3")
                 End If
             Next
         ElseIf cek = "DaftarPasien" Then
@@ -524,9 +526,9 @@ Public Class Gizi
         Dim cmd As MySqlCommand
         Dim da As MySqlDataAdapter
 
-        cmd = New MySqlCommand("SELECT 'ALL' AS nmPasien,'-' AS noDaftar 
+        cmd = New MySqlCommand("SELECT 'ALL' AS nmPasien
                                 UNION ALL
-                                SELECT px.nmPasien,rri.noDaftar
+                                SELECT px.nmPasien
                                   FROM t_pasien px, t_registrasi reg, t_registrasirawatinap rri
                                  WHERE px.noRekamedis = reg.noRekamedis AND
 	                                   reg.noDaftar = rri.noDaftar AND
@@ -538,9 +540,9 @@ Public Class Gizi
 
         txtFilterPasien.DataSource = dt
         txtFilterPasien.DisplayMember = "nmPasien"
-        txtFilterPasien.ValueMember = "noDaftar"
-        'txtFilterPasien.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-        'txtFilterPasien.AutoCompleteSource = AutoCompleteSource.ListItems
+        txtFilterPasien.ValueMember = "nmPasien"
+        txtFilterPasien.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        txtFilterPasien.AutoCompleteSource = AutoCompleteSource.ListItems
         conn.Close()
     End Sub
 
@@ -1031,17 +1033,8 @@ Public Class Gizi
         bentuk = DataGridView2.Rows(e.RowIndex).Cells(14).Value.ToString
         kelas = DataGridView2.Rows(e.RowIndex).Cells(15).Value.ToString
 
-        For Each row As DataGridViewRow In DataGridView2.SelectedRows
-            If row.Cells(11).Value.ToString = "KONDISI SEKARANG" Then
-                txtNoReg.Text = noDaftarRawatInap
-            ElseIf row.Cells(11).Value.ToString = "KONDISI LAMA" Then
-                txtNoReg.Text = txtNoReg.Text
-            ElseIf row.Cells(11).Value.ToString = "PASIEN CHECKOUT" Then
-                txtNoReg.Text = txtNoReg.Text
-            End If
-        Next
-
         txtKdPermintaanLama.Text = kdPermintaan
+        txtNoReg.Text = noDaftarRawatInap
         txtNama.Text = nmPasien
         txtAlergi.Text = kdAlergi
         txtDiagGizi.Text = diagnosaGizi
@@ -1243,6 +1236,41 @@ Public Class Gizi
         txtKet.Text = ""
         txtTgl.Value = Now
         DataGridView1.Rows.Clear()
+
+        'Dim konfirmasi As MsgBoxResult
+        'Dim startTimeSiang As New TimeSpan(7, 30, 0)  '07:30:00 WIB
+        'Dim startTimeSore As New TimeSpan(10, 0, 0)  '10:00:00 WIB
+        'Dim startTimePagiSore As New TimeSpan(10, 0, 0)  '10:00:00 WIB
+        'Dim startTimeSoreCito As New TimeSpan(10, 0, 0)  '10:00:00 WIB
+        'Dim endTimeSiang As New TimeSpan(10, 0, 0) '10:00:00 WIB
+        'Dim endTimeSore As New TimeSpan(11, 0, 0) '11:00:00 WIB
+        'Dim endTimePagiSore As New TimeSpan(11, 0, 0) '11:00:00 WIB
+        'Dim endTimeSoreCito As New TimeSpan(12, 30, 0) '12:30:00 WIB
+
+
+        'If txtTgl.Value.TimeOfDay >= startTimeSiang And txtTgl.Value.TimeOfDay <= endTimeSiang Then
+        '    konfirmasi = MsgBox("Anda telah melewati batas waktu perubahan bentuk makanan / menu diet !!!" & vbCrLf &
+        '                        "Diharapkan untuk konfirmasi melalui telepon kepada PM" & vbCrLf &
+        '                        "Apakah anda sudah konfirmasi PM ?", MsgBoxStyle.Exclamation + vbYesNo, "Konfirmasi")
+        '    If konfirmasi = vbYes Then
+
+        '    End If
+        'ElseIf txtWaktu.Text = "SORE" And txtTgl.Value.TimeOfDay >= startTimeSore And txtTgl.Value.TimeOfDay <= endTimeSore Then
+        '    konfirmasi = MsgBox("Anda telah melewati batas waktu perubahan bentuk makanan / menu diet !!!" & vbCrLf &
+        '                            "Diharapkan untuk konfirmasi melalui telepon kepada PM" & vbCrLf &
+        '                            "Apakah anda sudah konfirmasi PM ?", MsgBoxStyle.Exclamation + vbYesNo, "Konfirmasi")
+        '    If konfirmasi = vbYes Then
+
+        '    End If
+        'ElseIf txtWaktu.Text = "SORE" And txtTgl.Value.TimeOfDay >= startTimePagiSore And txtTgl.Value.TimeOfDay <= endTimePagiSore Then
+        '    konfirmasi = MsgBox("Anda telah melewati batas waktu perubahan bentuk makanan / menu diet !!!" & vbCrLf &
+        '                            "Diharapkan untuk konfirmasi melalui telepon kepada PM" & vbCrLf &
+        '                            "Apakah anda sudah konfirmasi PM ?", MsgBoxStyle.Exclamation + vbYesNo, "Konfirmasi")
+        '    If konfirmasi = vbYes Then
+
+        '    End If
+        'End If
+
     End Sub
 
     Private Sub btnClear2_Click(sender As Object, e As EventArgs) Handles btnClear2.Click
@@ -1422,45 +1450,10 @@ Public Class Gizi
 
     Private Sub btnTampil_Click(sender As Object, e As EventArgs) Handles btnTampil.Click
         Call filterPermintaan()
-
-        If txtFilterPasien.Text = "ALL" Then
-            Return
-        Else
-            Call koneksiServer()
-            Try
-                Dim query As String
-                query = "SELECT noDaftarRawatInap,kdRawatInap
-                           FROM t_registrasirawatinap
-                          WHERE noDaftar = '" & txtFilterPasien.SelectedValue.ToString & "'
-                       ORDER BY tglMasukRawatInap DESC LIMIT 1"
-
-                cmd = New MySqlCommand(query, conn)
-                dr = cmd.ExecuteReader
-
-                While dr.Read
-                    txtNoReg.Text = UCase(dr.GetString("noDaftarRawatInap"))
-                    txtKdRanap.Text = UCase(dr.GetString("kdRawatInap"))
-                End While
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
-            conn.Close()
-        End If
-
     End Sub
 
     Private Sub txtFilterPasien_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtFilterPasien.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub btnTampil_MouseLeave(sender As Object, e As EventArgs) Handles btnTampil.MouseLeave
-        Me.btnTampil.BackColor = Color.FromArgb(232, 243, 239)
-        Me.btnTampil.ForeColor = Color.FromArgb(26, 141, 95)
-    End Sub
-
-    Private Sub btnTampil_MouseEnter(sender As Object, e As EventArgs) Handles btnTampil.MouseEnter
-        Me.btnTampil.BackColor = Color.FromArgb(26, 141, 95)
-        Me.btnTampil.ForeColor = Color.FromArgb(232, 243, 239)
+        Call filterPermintaan()
     End Sub
 
     Private Sub DataGridView1_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles DataGridView1.RowPostPaint
@@ -1640,6 +1633,19 @@ Public Class Gizi
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        'Dim konfirmasi As MsgBoxResult
+        'Dim startTime As New TimeSpan(7, 30, 0)  '00:00:01 WIB
+        'Dim endTimePagi As New TimeSpan(10, 0, 0) '10:00:00 WIB
+
+        'If txtTgl.Value.TimeOfDay >= startTime And txtTgl.Value.TimeOfDay <= endTimePagi Then
+        '    konfirmasi = MsgBox("Anda telah melewati batas waktu perubahan bentuk makanan / menu diet !!!" & vbCrLf &
+        '                        "Diharapkan untuk konfirmasi melalui telepon kepada PM" & vbCrLf &
+        '                        "Apakah anda sudah konfirmasi PM ?", vbQuestion + vbYesNo, "Konfirmasi")
+        '    If konfirmasi = vbYes Then
+
+        '    End If
+        'End If
+
         If txtKdKelas.Text.Equals("-") Then
             Me.ErKelas.SetError(Me.txtAlergi, "Kelas dipilih terlebih dahulu")
             MsgBox("Mohon kelas dipilih terlebih dahulu !!", MsgBoxStyle.Exclamation)
@@ -1684,41 +1690,33 @@ Public Class Gizi
         End If
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        RiwayatAhliGizi.Show()
+    End Sub
+
     Private Sub txtKelas_LostFocus(sender As Object, e As EventArgs) Handles txtKelas.LostFocus
         If txtKelas.Text = "-" Then
             MsgBox("Pilih kelas terlebih dahulu  !!!", MsgBoxStyle.Information)
         End If
     End Sub
 
-    Private Sub txtFilterPasien_ValueMemberChanged(sender As Object, e As EventArgs) Handles txtFilterPasien.ValueMemberChanged
-
-
+    Private Sub btnTampil_MouseLeave(sender As Object, e As EventArgs) Handles btnTampil.MouseLeave
+        Me.btnTampil.BackColor = Color.FromArgb(232, 243, 239)
+        Me.btnTampil.ForeColor = Color.FromArgb(26, 141, 95)
     End Sub
 
-    Private Sub txtFilterPasien_SelectedValueChanged(sender As Object, e As EventArgs) Handles txtFilterPasien.SelectedValueChanged
-        Call filterPermintaan()
+    Private Sub btnTampil_MouseEnter(sender As Object, e As EventArgs) Handles btnTampil.MouseEnter
+        Me.btnTampil.BackColor = Color.FromArgb(26, 141, 95)
+        Me.btnTampil.ForeColor = Color.FromArgb(232, 243, 239)
+    End Sub
 
-        If txtFilterPasien.Text = "ALL" Then
-            Return
-        Else
-            Call koneksiServer()
-            Try
-                Dim query As String
-                query = "SELECT noDaftarRawatInap,kdRawatInap
-                           FROM t_registrasirawatinap
-                          WHERE noDaftar = '" & txtFilterPasien.SelectedValue.ToString & "'
-                       ORDER BY tglMasukRawatInap DESC LIMIT 1"
-                cmd = New MySqlCommand(query, conn)
-                dr = cmd.ExecuteReader
+    Private Sub btnCari_MouseLeave(sender As Object, e As EventArgs) Handles btnCari.MouseLeave
+        Me.btnCari.BackColor = Color.FromArgb(232, 243, 239)
+        Me.btnCari.ForeColor = Color.FromArgb(26, 141, 95)
+    End Sub
 
-                While dr.Read
-                    txtNoReg.Text = UCase(dr.GetString("noDaftarRawatInap"))
-                    txtKdRanap.Text = UCase(dr.GetString("kdRawatInap"))
-                End While
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            End Try
-            conn.Close()
-        End If
+    Private Sub btnCari_MouseEnter(sender As Object, e As EventArgs) Handles btnCari.MouseEnter
+        Me.btnCari.BackColor = Color.FromArgb(26, 141, 95)
+        Me.btnCari.ForeColor = Color.FromArgb(232, 243, 239)
     End Sub
 End Class

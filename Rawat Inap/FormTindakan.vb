@@ -113,7 +113,7 @@ Public Class FormTindakan
             query = "SELECT * 
                        FROM vw_caritindakan 
                       WHERE kelas = 'KELAS I' 
-                        AND (kdKelompokTindakan IN (38,48,49,62,63,77) 
+                        AND (kdKelompokTindakan IN (02,05,10,34,35,36,37,38,45,48,49,62,63,77) 
                             OR kdTarif IN (486210,061510,061520,061530,061540,020510,020520,020530) 
                             OR kdTindakan IN (3000009,3000011,3000015,3000018,3000019))
                       ORDER BY kdKelompokTindakan ASC, tindakan ASC"
@@ -321,7 +321,7 @@ Public Class FormTindakan
                        FROM vw_caritindakan 
                       WHERE kelas = 'KELAS I'  
                         AND tindakan like '%" & txtCari.Text & "%'
-                        AND (kdKelompokTindakan IN (38,48,49,62,63,77) 
+                        AND (kdKelompokTindakan IN (02,05,10,34,35,36,37,38,45,48,49,62,63,77)
                             OR kdTarif IN (486210,061510,061520,061530,061540,020510,020520,020530) 
                             OR kdTindakan IN (3000009,3000011,3000015,3000018,3000019))
                       ORDER BY kdKelompokTindakan ASC, tindakan ASC"

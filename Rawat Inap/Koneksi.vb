@@ -32,7 +32,7 @@ Module Koneksi
 
     Public Sub koneksiServer()
         Try
-            Dim str As String = "Server=192.168.200.2;user id=lis;password=lis1234;database=simrs1coba;default command timeout=120;Convert Zero Datetime=True"
+            Dim str As String = "Server=192.168.200.2;user id=lis;password=lis1234;database=simrs;default command timeout=120;Convert Zero Datetime=True"
             conn = New MySqlConnection(str)
             If conn.State = ConnectionState.Closed Then
                 conn.Open()
@@ -58,7 +58,7 @@ Module Koneksi
 
     Public Sub koneksiGizi()
         Try
-            Dim str As String = "Server=192.168.200.2;user id=lis;password=lis1234;database=gizicoba;default command timeout=120;Convert Zero Datetime=True"
+            Dim str As String = "Server=192.168.200.2;user id=lis;password=lis1234;database=gizi;default command timeout=120;Convert Zero Datetime=True"
             conn = New MySqlConnection(str)
             If conn.State = ConnectionState.Closed Then
                 conn.Open()

@@ -327,6 +327,8 @@ Public Class DaftarHasilLab
         For i = 0 To DataGridView1.Rows.Count - 1
             DataGridView1.Rows(i).Cells(15).Style.BackColor = Color.FromArgb(232, 243, 239)
             DataGridView1.Rows(i).Cells(15).Style.ForeColor = Color.FromArgb(26, 141, 95)
+            DataGridView1.Rows(i).Cells(15).Style.SelectionBackColor = Color.FromArgb(26, 141, 95)
+            DataGridView1.Rows(i).Cells(15).Style.SelectionForeColor = Color.FromArgb(232, 243, 239)
         Next
 
         For Each column As DataGridViewColumn In DataGridView1.Columns
@@ -354,5 +356,28 @@ Public Class DaftarHasilLab
     Private Sub btnTampil_MouseEnter(sender As Object, e As EventArgs) Handles btnTampil.MouseEnter
         Me.btnTampil.BackColor = Color.FromArgb(26, 141, 95)
         Me.btnTampil.ForeColor = Color.FromArgb(232, 243, 239)
+    End Sub
+
+    Private Sub DataGridView1_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles DataGridView1.RowPostPaint
+        Dim dg As DataGridView = DirectCast(sender, DataGridView)
+        ' Current row record
+        Dim rowNumber As String = (e.RowIndex + 1).ToString()
+
+        ' Format row based on number of records displayed by using leading zeros
+        'While rowNumber.Length < dg.RowCount.ToString().Length
+        '    rowNumber = "0" & rowNumber
+        'End While
+
+        ' Position text
+        Dim size As SizeF = e.Graphics.MeasureString(rowNumber, Me.Font)
+        If dg.RowHeadersWidth < CInt(size.Width + 20) Then
+            dg.RowHeadersWidth = CInt(size.Width + 20)
+        End If
+
+        ' Use default system text brush
+        Dim b As Brush = SystemBrushes.ControlText
+
+        ' Draw row number
+        e.Graphics.DrawString(rowNumber, dg.Font, b, e.RowBounds.Location.X + 15, e.RowBounds.Location.Y + ((e.RowBounds.Height - size.Height) / 2))
     End Sub
 End Class

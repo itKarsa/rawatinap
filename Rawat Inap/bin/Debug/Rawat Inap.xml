@@ -207,12 +207,12 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:Rawat_Inap.CetakHasilLab.vw_cetakhasilpatologiDataTable">
+<member name="T:Rawat_Inap.CetakHasilLab.vw_pasienrawatinapDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:Rawat_Inap.CetakHasilLab.vw_pasienrawatinapDataTable">
+<member name="T:Rawat_Inap.CetakHasilLab.vw_cetakhasilpatologiDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -232,12 +232,12 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:Rawat_Inap.CetakHasilLab.vw_cetakhasilpatologiRow">
+<member name="T:Rawat_Inap.CetakHasilLab.vw_pasienrawatinapRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:Rawat_Inap.CetakHasilLab.vw_pasienrawatinapRow">
+<member name="T:Rawat_Inap.CetakHasilLab.vw_cetakhasilpatologiRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -257,12 +257,12 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:Rawat_Inap.CetakHasilLab.vw_cetakhasilpatologiRowChangeEvent">
+<member name="T:Rawat_Inap.CetakHasilLab.vw_pasienrawatinapRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:Rawat_Inap.CetakHasilLab.vw_pasienrawatinapRowChangeEvent">
+<member name="T:Rawat_Inap.CetakHasilLab.vw_cetakhasilpatologiRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -282,12 +282,12 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:Rawat_Inap.CetakHasilLabTableAdapters.vw_cetakhasilpatologiTableAdapter">
+<member name="T:Rawat_Inap.CetakHasilLabTableAdapters.vw_pasienrawatinapTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:Rawat_Inap.CetakHasilLabTableAdapters.vw_pasienrawatinapTableAdapter">
+<member name="T:Rawat_Inap.CetakHasilLabTableAdapters.vw_cetakhasilpatologiTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

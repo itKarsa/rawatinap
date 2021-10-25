@@ -543,6 +543,16 @@ Public Class Form1
         Me.btnVenti.ForeColor = Color.FromArgb(232, 243, 239)
     End Sub
 
+    Private Sub btnHasilPA_MouseLeave(sender As Object, e As EventArgs) Handles btnHasilPA.MouseLeave
+        Me.btnHasilPA.BackColor = Color.FromArgb(232, 243, 239)
+        Me.btnHasilPA.ForeColor = Color.FromArgb(26, 141, 95)
+    End Sub
+
+    Private Sub btnHasilPA_MouseEnter(sender As Object, e As EventArgs) Handles btnHasilPA.MouseEnter
+        Me.btnHasilPA.BackColor = Color.FromArgb(26, 141, 95)
+        Me.btnHasilPA.ForeColor = Color.FromArgb(232, 243, 239)
+    End Sub
+
     Private Sub btnPilihRuang_MouseLeave(sender As Object, e As EventArgs) Handles btnPilihRuang.MouseLeave
         Me.btnPilihRuang.BackColor = Color.PowderBlue
     End Sub
@@ -1074,6 +1084,13 @@ Public Class Form1
     Private Sub btnOKParu_Click(sender As Object, e As EventArgs) Handles btnOKParu.Click
         Dim fok As OKParu = New OKParu
         fok.ShowDialog()
+    End Sub
+
+    Private Sub btnHasilPA_Click(sender As Object, e As EventArgs) Handles btnHasilPA.Click
+        DaftarHasilPA.Ambil_Data = True
+        DaftarHasilPA.Form_Ambil_Data = "DaftarHasilPA"
+        DaftarHasilPA.Show()
+        Me.Hide()
     End Sub
 
     Private Sub txtUnitRanap_TextChanged(sender As Object, e As EventArgs) Handles txtUnitRanap.TextChanged

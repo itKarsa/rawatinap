@@ -57,6 +57,7 @@ Public Class ViewHasilPA
         htmlMikro = r.ConvertString(rtbMi.Rtf)
         htmlConclu = r.ConvertString(rtbCo.Rtf)
 
+        Dim noRM As New ReportParameter()
         Dim drPA As New ReportParameter("dokPA", DokPA)
         Dim makros As New ReportParameter("makros", htmlMakro)
         Dim mikros As New ReportParameter("mikros", htmlMikro)

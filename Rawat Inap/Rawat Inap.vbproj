@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\simrs_02\New folder\kelengkapan Pengembangan\_NEW SIMRS 2019\APPS\Publish\APP Rawat Inap\</InstallUrl>
     <UpdateUrl>\\simrs_02\New folder\kelengkapan Pengembangan\_NEW SIMRS 2019\APPS\Publish\APP Rawat Inap\</UpdateUrl>
-    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationRevision>21</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -304,6 +304,12 @@
     <Compile Include="myGroupBox.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RiwayatAhliGizi.Designer.vb">
+      <DependentUpon>RiwayatAhliGizi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RiwayatAhliGizi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ShapedPanel.Designer.vb">
       <DependentUpon>ShapedPanel.vb</DependentUpon>
     </Compile>
@@ -502,6 +508,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="myGroupBox.resx">
       <DependentUpon>myGroupBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiwayatAhliGizi.resx">
+      <DependentUpon>RiwayatAhliGizi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShapedPanel.resx">
       <DependentUpon>ShapedPanel.vb</DependentUpon>

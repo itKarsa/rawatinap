@@ -30,15 +30,15 @@ Public Class Checkout
     Sub updateRegRanap()
         Call koneksiServer()
         Try
-            Dim str As String
-            Dim cmd As MySqlCommand
-            str = "UPDATE t_registrasirawatinap SET tglKeluarRawatInap = '" & Format(datePulang.Value, "yyyy-MM-dd HH:mm:ss") & "', 
+            Dim strRgnap As String
+            Dim cmdRgnap As MySqlCommand
+            strRgnap = "UPDATE t_registrasirawatinap SET tglKeluarRawatInap = '" & Format(datePulang.Value, "yyyy-MM-dd HH:mm:ss") & "', 
                                                     jumlahHariMenginap = '" & txtJumHaper.Text & "', 
                                                     totalMenginap = '" & txtTotalTarif.Text & "' 
                                               WHERE noDaftarRawatInap = '" & txtNoRegRanap.Text & "'"
             'MsgBox(str)
-            cmd = New MySqlCommand(str, conn)
-            cmd.ExecuteNonQuery()
+            cmdRgnap = New MySqlCommand(strRgnap, conn)
+            cmdRgnap.ExecuteNonQuery()
         Catch ex As Exception
             MessageBox.Show(ex.Message & " -Reg.Ranap-")
         End Try
@@ -48,14 +48,14 @@ Public Class Checkout
     Sub updateStatusBed()
         Call koneksiServer()
         Try
-            Dim str As String
-            Dim cmd As MySqlCommand
-            str = "UPDATE t_tarifkelaskamar SET kdStatusBed = 'st6' 
+            Dim strBed As String
+            Dim cmdBed As MySqlCommand
+            strBed = "UPDATE t_tarifkelaskamar SET kdStatusBed = 'st6' 
                                           WHERE kdTarifKelasKmr = '" & txtKdTarifKelasKmr.Text & "'"
             'MsgBox(str)
-            cmd = New MySqlCommand(str, conn)
-            cmd.ExecuteNonQuery()
-            MsgBox("Status Bed berhasil update.", MsgBoxStyle.Information)
+            cmdBed = New MySqlCommand(strBed, conn)
+            cmdBed.ExecuteNonQuery()
+            'MsgBox("Status Bed berhasil update.", MsgBoxStyle.Information)
         Catch ex As Exception
             MessageBox.Show(ex.Message & " -Status Bed-")
         End Try
@@ -64,17 +64,17 @@ Public Class Checkout
 
     Sub updateCheckout()
         Call koneksiServer()
-        Dim str As String = ""
-        Dim cmd As MySqlCommand
+        Dim strCo As String = ""
+        Dim cmdCo As MySqlCommand
         If txtTglMeninggal.Text = "" Then
-            str = "UPDATE t_registrasi SET tglPulang = '" & Format(datePulang.Value, "yyyy-MM-dd HH:mm:ss") & "',
+            strCo = "UPDATE t_registrasi SET tglPulang = '" & Format(datePulang.Value, "yyyy-MM-dd HH:mm:ss") & "',
                                            kdStatusKeluar = '" & txtKdStatusKeluar.Text & "', 
                                            kdCaraKeluar = '" & txtKdCaraKeluar.Text & "',
                                            dirujukke = '" & txtRujuk.Text & "',
                                            alasan = '" & txtAlasan.Text & "'
                                      WHERE noDaftar = '" & txtNoReg.Text & "'"
         Else
-            str = "UPDATE t_registrasi SET tglPulang = '" & Format(datePulang.Value, "yyyy-MM-dd HH:mm:ss") & "',
+            strCo = "UPDATE t_registrasi SET tglPulang = '" & Format(datePulang.Value, "yyyy-MM-dd HH:mm:ss") & "',
                                            kdStatusKeluar = '" & txtKdStatusKeluar.Text & "', 
                                            kdCaraKeluar = '" & txtKdCaraKeluar.Text & "',
                                            dirujukke = '" & txtRujuk.Text & "',
@@ -85,8 +85,8 @@ Public Class Checkout
         'MsgBox(str)
 
         Try
-            cmd = New MySqlCommand(str, conn)
-            cmd.ExecuteNonQuery()
+            cmdCo = New MySqlCommand(strCo, conn)
+            cmdCo.ExecuteNonQuery()
             MsgBox("Pasien berhasil checkout.", MsgBoxStyle.Information)
         Catch ex As Exception
             MsgBox(ex.Message & " -Registrasi-")
@@ -97,15 +97,16 @@ Public Class Checkout
     Sub updateCheckoutGizi(noRegRanap As String)
         Call koneksiGizi()
         Try
-            Dim str As String = ""
-            str = "UPDATE t_permintaan
+            Dim strCoGz As String = ""
+            Dim cmdCoGz As MySqlCommand
+            strCoGz = "UPDATE t_permintaan
                       SET statusUpdate = '2', 
                           dateUpdate = '" & Format(datePulang.Value, "yyyy-MM-dd HH:mm:ss") & "',
                           userModify = CONCAT(userModify,';" & LoginForm.txtUsername.Text & "'),  
                           dateModify = CONCAT(dateModify,';" & Format(DateTime.Now, "yyyy-MM-dd HH:mm:ss") & "')
                     WHERE noDaftarRawatInap = '" & noRegRanap & "'"
-            cmd = New MySqlCommand(str, conn)
-            cmd.ExecuteNonQuery()
+            cmdCoGz = New MySqlCommand(strCoGz, conn)
+            cmdCoGz.ExecuteNonQuery()
             'MsgBox("Pasien Checkout berhasil dilakukan", MessageBoxIcon.Information)
         Catch ex As Exception
             MsgBox("Pasien Checkout gagal dilakukan.", MessageBoxIcon.Error, "Error Update Kondisi")
@@ -500,9 +501,9 @@ Public Class Checkout
         'txtJumHaper.Text = hitungHaper(inap)
         'txtTotalTarif.Text = Val(txtTarif.Text * txtJumHaper.Text)
         Call jumHaper()
-        If jmlRuang > 1 Then
-            txtJumHaper.Text = Val(txtJumHaper.Text - 1)
-        End If
+        'If jmlRuang > 1 Then
+        '    txtJumHaper.Text = Val(txtJumHaper.Text - 1)
+        'End If
         txtTotalTarif.Text = Val(txtTarif.Text * txtJumHaper.Text)
     End Sub
 

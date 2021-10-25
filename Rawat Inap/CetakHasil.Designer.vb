@@ -31,9 +31,9 @@ Partial Public Class CetakHasilLab
     
     Private tablevw_lis As vw_lisDataTable
     
-    Private tablevw_cetakhasilpatologi As vw_cetakhasilpatologiDataTable
-    
     Private tablevw_pasienrawatinap As vw_pasienrawatinapDataTable
+    
+    Private tablevw_cetakhasilpatologi As vw_cetakhasilpatologiDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -73,11 +73,11 @@ Partial Public Class CetakHasilLab
             If (Not (ds.Tables("vw_lis")) Is Nothing) Then
                 MyBase.Tables.Add(New vw_lisDataTable(ds.Tables("vw_lis")))
             End If
-            If (Not (ds.Tables("vw_cetakhasilpatologi")) Is Nothing) Then
-                MyBase.Tables.Add(New vw_cetakhasilpatologiDataTable(ds.Tables("vw_cetakhasilpatologi")))
-            End If
             If (Not (ds.Tables("vw_pasienrawatinap")) Is Nothing) Then
                 MyBase.Tables.Add(New vw_pasienrawatinapDataTable(ds.Tables("vw_pasienrawatinap")))
+            End If
+            If (Not (ds.Tables("vw_cetakhasilpatologi")) Is Nothing) Then
+                MyBase.Tables.Add(New vw_cetakhasilpatologiDataTable(ds.Tables("vw_cetakhasilpatologi")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -130,9 +130,9 @@ Partial Public Class CetakHasilLab
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property vw_cetakhasilpatologi() As vw_cetakhasilpatologiDataTable
+    Public ReadOnly Property vw_pasienrawatinap() As vw_pasienrawatinapDataTable
         Get
-            Return Me.tablevw_cetakhasilpatologi
+            Return Me.tablevw_pasienrawatinap
         End Get
     End Property
     
@@ -140,9 +140,9 @@ Partial Public Class CetakHasilLab
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property vw_pasienrawatinap() As vw_pasienrawatinapDataTable
+    Public ReadOnly Property vw_cetakhasilpatologi() As vw_cetakhasilpatologiDataTable
         Get
-            Return Me.tablevw_pasienrawatinap
+            Return Me.tablevw_cetakhasilpatologi
         End Get
     End Property
     
@@ -222,11 +222,11 @@ Partial Public Class CetakHasilLab
             If (Not (ds.Tables("vw_lis")) Is Nothing) Then
                 MyBase.Tables.Add(New vw_lisDataTable(ds.Tables("vw_lis")))
             End If
-            If (Not (ds.Tables("vw_cetakhasilpatologi")) Is Nothing) Then
-                MyBase.Tables.Add(New vw_cetakhasilpatologiDataTable(ds.Tables("vw_cetakhasilpatologi")))
-            End If
             If (Not (ds.Tables("vw_pasienrawatinap")) Is Nothing) Then
                 MyBase.Tables.Add(New vw_pasienrawatinapDataTable(ds.Tables("vw_pasienrawatinap")))
+            End If
+            If (Not (ds.Tables("vw_cetakhasilpatologi")) Is Nothing) Then
+                MyBase.Tables.Add(New vw_cetakhasilpatologiDataTable(ds.Tables("vw_cetakhasilpatologi")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -278,16 +278,16 @@ Partial Public Class CetakHasilLab
                 Me.tablevw_lis.InitVars
             End If
         End If
-        Me.tablevw_cetakhasilpatologi = CType(MyBase.Tables("vw_cetakhasilpatologi"),vw_cetakhasilpatologiDataTable)
-        If (initTable = true) Then
-            If (Not (Me.tablevw_cetakhasilpatologi) Is Nothing) Then
-                Me.tablevw_cetakhasilpatologi.InitVars
-            End If
-        End If
         Me.tablevw_pasienrawatinap = CType(MyBase.Tables("vw_pasienrawatinap"),vw_pasienrawatinapDataTable)
         If (initTable = true) Then
             If (Not (Me.tablevw_pasienrawatinap) Is Nothing) Then
                 Me.tablevw_pasienrawatinap.InitVars
+            End If
+        End If
+        Me.tablevw_cetakhasilpatologi = CType(MyBase.Tables("vw_cetakhasilpatologi"),vw_cetakhasilpatologiDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablevw_cetakhasilpatologi) Is Nothing) Then
+                Me.tablevw_cetakhasilpatologi.InitVars
             End If
         End If
     End Sub
@@ -306,10 +306,10 @@ Partial Public Class CetakHasilLab
         MyBase.Tables.Add(Me.tablevw_cetakhasilradranap)
         Me.tablevw_lis = New vw_lisDataTable()
         MyBase.Tables.Add(Me.tablevw_lis)
-        Me.tablevw_cetakhasilpatologi = New vw_cetakhasilpatologiDataTable()
-        MyBase.Tables.Add(Me.tablevw_cetakhasilpatologi)
         Me.tablevw_pasienrawatinap = New vw_pasienrawatinapDataTable()
         MyBase.Tables.Add(Me.tablevw_pasienrawatinap)
+        Me.tablevw_cetakhasilpatologi = New vw_cetakhasilpatologiDataTable()
+        MyBase.Tables.Add(Me.tablevw_cetakhasilpatologi)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -332,13 +332,13 @@ Partial Public Class CetakHasilLab
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Private Function ShouldSerializevw_cetakhasilpatologi() As Boolean
+    Private Function ShouldSerializevw_pasienrawatinap() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Private Function ShouldSerializevw_pasienrawatinap() As Boolean
+    Private Function ShouldSerializevw_cetakhasilpatologi() As Boolean
         Return false
     End Function
     
@@ -410,10 +410,10 @@ Partial Public Class CetakHasilLab
     Public Delegate Sub vw_lisRowChangeEventHandler(ByVal sender As Object, ByVal e As vw_lisRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Public Delegate Sub vw_cetakhasilpatologiRowChangeEventHandler(ByVal sender As Object, ByVal e As vw_cetakhasilpatologiRowChangeEvent)
+    Public Delegate Sub vw_pasienrawatinapRowChangeEventHandler(ByVal sender As Object, ByVal e As vw_pasienrawatinapRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Public Delegate Sub vw_pasienrawatinapRowChangeEventHandler(ByVal sender As Object, ByVal e As vw_pasienrawatinapRowChangeEvent)
+    Public Delegate Sub vw_cetakhasilpatologiRowChangeEventHandler(ByVal sender As Object, ByVal e As vw_cetakhasilpatologiRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -1885,513 +1885,6 @@ Partial Public Class CetakHasilLab
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class vw_cetakhasilpatologiDataTable
-        Inherits Global.System.Data.TypedTableBase(Of vw_cetakhasilpatologiRow)
-        
-        Private columnnoRekamedis As Global.System.Data.DataColumn
-        
-        Private columnnoRegistrasiPARajal As Global.System.Data.DataColumn
-        
-        Private columnnmPasien As Global.System.Data.DataColumn
-        
-        Private columnjenisKelamin As Global.System.Data.DataColumn
-        
-        Private columntglLahir As Global.System.Data.DataColumn
-        
-        Private columnalamat As Global.System.Data.DataColumn
-        
-        Private columnnamapetugasMedis As Global.System.Data.DataColumn
-        
-        Private columnasalrs As Global.System.Data.DataColumn
-        
-        Private columnasalpengirim As Global.System.Data.DataColumn
-        
-        Private columntglTerimaSediaan As Global.System.Data.DataColumn
-        
-        Private columntglHasil As Global.System.Data.DataColumn
-        
-        Private columnnoPA As Global.System.Data.DataColumn
-        
-        Private columnlokalisasi As Global.System.Data.DataColumn
-        
-        Private columndiagnosa As Global.System.Data.DataColumn
-        
-        Private columnbahan As Global.System.Data.DataColumn
-        
-        Private columnmakroskopik As Global.System.Data.DataColumn
-        
-        Private columnmikroskopik As Global.System.Data.DataColumn
-        
-        Private columnkesimpulan As Global.System.Data.DataColumn
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.TableName = "vw_cetakhasilpatologi"
-            Me.BeginInit
-            Me.InitClass
-            Me.EndInit
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Friend Sub New(ByVal table As Global.System.Data.DataTable)
-            MyBase.New
-            Me.TableName = table.TableName
-            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
-                Me.CaseSensitive = table.CaseSensitive
-            End If
-            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
-                Me.Locale = table.Locale
-            End If
-            If (table.Namespace <> table.DataSet.Namespace) Then
-                Me.Namespace = table.Namespace
-            End If
-            Me.Prefix = table.Prefix
-            Me.MinimumCapacity = table.MinimumCapacity
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
-            MyBase.New(info, context)
-            Me.InitVars
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property noRekamedisColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnoRekamedis
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property noRegistrasiPARajalColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnoRegistrasiPARajal
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property nmPasienColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnmPasien
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property jenisKelaminColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnjenisKelamin
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property tglLahirColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columntglLahir
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property alamatColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnalamat
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property namapetugasMedisColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnamapetugasMedis
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property asalrsColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnasalrs
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property asalpengirimColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnasalpengirim
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property tglTerimaSediaanColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columntglTerimaSediaan
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property tglHasilColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columntglHasil
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property noPAColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnoPA
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property lokalisasiColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnlokalisasi
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property diagnosaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndiagnosa
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property bahanColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnbahan
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property makroskopikColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnmakroskopik
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property mikroskopikColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnmikroskopik
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property kesimpulanColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnkesimpulan
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Browsable(false)>  _
-        Public ReadOnly Property Count() As Integer
-            Get
-                Return Me.Rows.Count
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As vw_cetakhasilpatologiRow
-            Get
-                Return CType(Me.Rows(index),vw_cetakhasilpatologiRow)
-            End Get
-        End Property
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event vw_cetakhasilpatologiRowChanging As vw_cetakhasilpatologiRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event vw_cetakhasilpatologiRowChanged As vw_cetakhasilpatologiRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event vw_cetakhasilpatologiRowDeleting As vw_cetakhasilpatologiRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Event vw_cetakhasilpatologiRowDeleted As vw_cetakhasilpatologiRowChangeEventHandler
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Sub Addvw_cetakhasilpatologiRow(ByVal row As vw_cetakhasilpatologiRow)
-            Me.Rows.Add(row)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function Addvw_cetakhasilpatologiRow( _
-                    ByVal noRekamedis As String,  _
-                    ByVal noRegistrasiPARajal As String,  _
-                    ByVal nmPasien As String,  _
-                    ByVal jenisKelamin As String,  _
-                    ByVal tglLahir As Date,  _
-                    ByVal alamat As String,  _
-                    ByVal namapetugasMedis As String,  _
-                    ByVal asalrs As String,  _
-                    ByVal asalpengirim As String,  _
-                    ByVal tglTerimaSediaan As String,  _
-                    ByVal tglHasil As String,  _
-                    ByVal noPA As String,  _
-                    ByVal lokalisasi As String,  _
-                    ByVal diagnosa As String,  _
-                    ByVal bahan As String,  _
-                    ByVal makroskopik() As Byte,  _
-                    ByVal mikroskopik() As Byte,  _
-                    ByVal kesimpulan() As Byte) As vw_cetakhasilpatologiRow
-            Dim rowvw_cetakhasilpatologiRow As vw_cetakhasilpatologiRow = CType(Me.NewRow,vw_cetakhasilpatologiRow)
-            Dim columnValuesArray() As Object = New Object() {noRekamedis, noRegistrasiPARajal, nmPasien, jenisKelamin, tglLahir, alamat, namapetugasMedis, asalrs, asalpengirim, tglTerimaSediaan, tglHasil, noPA, lokalisasi, diagnosa, bahan, makroskopik, mikroskopik, kesimpulan}
-            rowvw_cetakhasilpatologiRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowvw_cetakhasilpatologiRow)
-            Return rowvw_cetakhasilpatologiRow
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As vw_cetakhasilpatologiDataTable = CType(MyBase.Clone,vw_cetakhasilpatologiDataTable)
-            cln.InitVars
-            Return cln
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New vw_cetakhasilpatologiDataTable()
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Friend Sub InitVars()
-            Me.columnnoRekamedis = MyBase.Columns("noRekamedis")
-            Me.columnnoRegistrasiPARajal = MyBase.Columns("noRegistrasiPARajal")
-            Me.columnnmPasien = MyBase.Columns("nmPasien")
-            Me.columnjenisKelamin = MyBase.Columns("jenisKelamin")
-            Me.columntglLahir = MyBase.Columns("tglLahir")
-            Me.columnalamat = MyBase.Columns("alamat")
-            Me.columnnamapetugasMedis = MyBase.Columns("namapetugasMedis")
-            Me.columnasalrs = MyBase.Columns("asalrs")
-            Me.columnasalpengirim = MyBase.Columns("asalpengirim")
-            Me.columntglTerimaSediaan = MyBase.Columns("tglTerimaSediaan")
-            Me.columntglHasil = MyBase.Columns("tglHasil")
-            Me.columnnoPA = MyBase.Columns("noPA")
-            Me.columnlokalisasi = MyBase.Columns("lokalisasi")
-            Me.columndiagnosa = MyBase.Columns("diagnosa")
-            Me.columnbahan = MyBase.Columns("bahan")
-            Me.columnmakroskopik = MyBase.Columns("makroskopik")
-            Me.columnmikroskopik = MyBase.Columns("mikroskopik")
-            Me.columnkesimpulan = MyBase.Columns("kesimpulan")
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Private Sub InitClass()
-            Me.columnnoRekamedis = New Global.System.Data.DataColumn("noRekamedis", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnoRekamedis)
-            Me.columnnoRegistrasiPARajal = New Global.System.Data.DataColumn("noRegistrasiPARajal", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnoRegistrasiPARajal)
-            Me.columnnmPasien = New Global.System.Data.DataColumn("nmPasien", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnmPasien)
-            Me.columnjenisKelamin = New Global.System.Data.DataColumn("jenisKelamin", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnjenisKelamin)
-            Me.columntglLahir = New Global.System.Data.DataColumn("tglLahir", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columntglLahir)
-            Me.columnalamat = New Global.System.Data.DataColumn("alamat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnalamat)
-            Me.columnnamapetugasMedis = New Global.System.Data.DataColumn("namapetugasMedis", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnamapetugasMedis)
-            Me.columnasalrs = New Global.System.Data.DataColumn("asalrs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnasalrs)
-            Me.columnasalpengirim = New Global.System.Data.DataColumn("asalpengirim", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnasalpengirim)
-            Me.columntglTerimaSediaan = New Global.System.Data.DataColumn("tglTerimaSediaan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columntglTerimaSediaan)
-            Me.columntglHasil = New Global.System.Data.DataColumn("tglHasil", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columntglHasil)
-            Me.columnnoPA = New Global.System.Data.DataColumn("noPA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnoPA)
-            Me.columnlokalisasi = New Global.System.Data.DataColumn("lokalisasi", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnlokalisasi)
-            Me.columndiagnosa = New Global.System.Data.DataColumn("diagnosa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndiagnosa)
-            Me.columnbahan = New Global.System.Data.DataColumn("bahan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnbahan)
-            Me.columnmakroskopik = New Global.System.Data.DataColumn("makroskopik", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmakroskopik)
-            Me.columnmikroskopik = New Global.System.Data.DataColumn("mikroskopik", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmikroskopik)
-            Me.columnkesimpulan = New Global.System.Data.DataColumn("kesimpulan", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnkesimpulan)
-            Me.columnnoRekamedis.AllowDBNull = false
-            Me.columnnoRekamedis.MaxLength = 30
-            Me.columnnoRegistrasiPARajal.AllowDBNull = false
-            Me.columnnoRegistrasiPARajal.MaxLength = 50
-            Me.columnnmPasien.MaxLength = 50
-            Me.columnjenisKelamin.MaxLength = 15
-            Me.columnalamat.MaxLength = 65535
-            Me.columnnamapetugasMedis.MaxLength = 50
-            Me.columnasalrs.MaxLength = 255
-            Me.columnasalpengirim.MaxLength = 255
-            Me.columntglTerimaSediaan.MaxLength = 65535
-            Me.columntglHasil.MaxLength = 65535
-            Me.columnnoPA.MaxLength = 65535
-            Me.columnlokalisasi.MaxLength = 65535
-            Me.columndiagnosa.MaxLength = 65535
-            Me.columnbahan.MaxLength = 65535
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Newvw_cetakhasilpatologiRow() As vw_cetakhasilpatologiRow
-            Return CType(Me.NewRow,vw_cetakhasilpatologiRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New vw_cetakhasilpatologiRow(builder)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(vw_cetakhasilpatologiRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowChanged(e)
-            If (Not (Me.vw_cetakhasilpatologiRowChangedEvent) Is Nothing) Then
-                RaiseEvent vw_cetakhasilpatologiRowChanged(Me, New vw_cetakhasilpatologiRowChangeEvent(CType(e.Row,vw_cetakhasilpatologiRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowChanging(e)
-            If (Not (Me.vw_cetakhasilpatologiRowChangingEvent) Is Nothing) Then
-                RaiseEvent vw_cetakhasilpatologiRowChanging(Me, New vw_cetakhasilpatologiRowChangeEvent(CType(e.Row,vw_cetakhasilpatologiRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowDeleted(e)
-            If (Not (Me.vw_cetakhasilpatologiRowDeletedEvent) Is Nothing) Then
-                RaiseEvent vw_cetakhasilpatologiRowDeleted(Me, New vw_cetakhasilpatologiRowChangeEvent(CType(e.Row,vw_cetakhasilpatologiRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowDeleting(e)
-            If (Not (Me.vw_cetakhasilpatologiRowDeletingEvent) Is Nothing) Then
-                RaiseEvent vw_cetakhasilpatologiRowDeleting(Me, New vw_cetakhasilpatologiRowChangeEvent(CType(e.Row,vw_cetakhasilpatologiRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Removevw_cetakhasilpatologiRow(ByVal row As vw_cetakhasilpatologiRow)
-            Me.Rows.Remove(row)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
-            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As CetakHasilLab = New CetakHasilLab()
-            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
-            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
-            any1.MinOccurs = New Decimal(0)
-            any1.MaxOccurs = Decimal.MaxValue
-            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
-            sequence.Items.Add(any1)
-            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
-            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
-            any2.MinOccurs = New Decimal(1)
-            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
-            sequence.Items.Add(any2)
-            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
-            attribute1.Name = "namespace"
-            attribute1.FixedValue = ds.Namespace
-            type.Attributes.Add(attribute1)
-            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
-            attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "vw_cetakhasilpatologiDataTable"
-            type.Attributes.Add(attribute2)
-            type.Particle = sequence
-            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
-            If xs.Contains(dsSchema.TargetNamespace) Then
-                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
-                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
-                Try 
-                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
-                    dsSchema.Write(s1)
-                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
-                    Do While schemas.MoveNext
-                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
-                        s2.SetLength(0)
-                        schema.Write(s2)
-                        If (s1.Length = s2.Length) Then
-                            s1.Position = 0
-                            s2.Position = 0
-                            
-                            Do While ((s1.Position <> s1.Length)  _
-                                        AndAlso (s1.ReadByte = s2.ReadByte))
-                                
-                                
-                            Loop
-                            If (s1.Position = s1.Length) Then
-                                Return type
-                            End If
-                        End If
-                        
-                    Loop
-                Finally
-                    If (Not (s1) Is Nothing) Then
-                        s1.Close
-                    End If
-                    If (Not (s2) Is Nothing) Then
-                        s2.Close
-                    End If
-                End Try
-            End If
-            xs.Add(dsSchema)
-            Return type
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the strongly named DataTable class.
-    '''</summary>
-    <Global.System.Serializable(),  _
-     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class vw_pasienrawatinapDataTable
         Inherits Global.System.Data.TypedTableBase(Of vw_pasienrawatinapRow)
         
@@ -3242,6 +2735,528 @@ Partial Public Class CetakHasilLab
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "vw_pasienrawatinapDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class vw_cetakhasilpatologiDataTable
+        Inherits Global.System.Data.TypedTableBase(Of vw_cetakhasilpatologiRow)
+        
+        Private columnnoRekamedis As Global.System.Data.DataColumn
+        
+        Private columnnoRegistrasiPARajal As Global.System.Data.DataColumn
+        
+        Private columnnmPasien As Global.System.Data.DataColumn
+        
+        Private columnjenisKelamin As Global.System.Data.DataColumn
+        
+        Private columntglLahir As Global.System.Data.DataColumn
+        
+        Private columnalamat As Global.System.Data.DataColumn
+        
+        Private columnnamapetugasMedis As Global.System.Data.DataColumn
+        
+        Private columnasalrs As Global.System.Data.DataColumn
+        
+        Private columnasalpengirim As Global.System.Data.DataColumn
+        
+        Private columntglTerimaSediaan As Global.System.Data.DataColumn
+        
+        Private columntglHasil As Global.System.Data.DataColumn
+        
+        Private columnnoPA As Global.System.Data.DataColumn
+        
+        Private columnlokalisasi As Global.System.Data.DataColumn
+        
+        Private columndiagnosa As Global.System.Data.DataColumn
+        
+        Private columnbahan As Global.System.Data.DataColumn
+        
+        Private columnmakroskopik As Global.System.Data.DataColumn
+        
+        Private columnmikroskopik As Global.System.Data.DataColumn
+        
+        Private columnkesimpulan As Global.System.Data.DataColumn
+        
+        Private columndokterPemeriksa As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "vw_cetakhasilpatologi"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property noRekamedisColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnoRekamedis
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property noRegistrasiPARajalColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnoRegistrasiPARajal
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property nmPasienColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnmPasien
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property jenisKelaminColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnjenisKelamin
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property tglLahirColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntglLahir
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property alamatColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnalamat
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property namapetugasMedisColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnamapetugasMedis
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property asalrsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnasalrs
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property asalpengirimColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnasalpengirim
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property tglTerimaSediaanColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntglTerimaSediaan
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property tglHasilColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntglHasil
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property noPAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnoPA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property lokalisasiColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnlokalisasi
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property diagnosaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndiagnosa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property bahanColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnbahan
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property makroskopikColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmakroskopik
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property mikroskopikColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmikroskopik
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property kesimpulanColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnkesimpulan
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property dokterPemeriksaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndokterPemeriksa
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As vw_cetakhasilpatologiRow
+            Get
+                Return CType(Me.Rows(index),vw_cetakhasilpatologiRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event vw_cetakhasilpatologiRowChanging As vw_cetakhasilpatologiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event vw_cetakhasilpatologiRowChanged As vw_cetakhasilpatologiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event vw_cetakhasilpatologiRowDeleting As vw_cetakhasilpatologiRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Event vw_cetakhasilpatologiRowDeleted As vw_cetakhasilpatologiRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overloads Sub Addvw_cetakhasilpatologiRow(ByVal row As vw_cetakhasilpatologiRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overloads Function Addvw_cetakhasilpatologiRow( _
+                    ByVal noRekamedis As String,  _
+                    ByVal noRegistrasiPARajal As String,  _
+                    ByVal nmPasien As String,  _
+                    ByVal jenisKelamin As String,  _
+                    ByVal tglLahir As Date,  _
+                    ByVal alamat As String,  _
+                    ByVal namapetugasMedis As String,  _
+                    ByVal asalrs As String,  _
+                    ByVal asalpengirim As String,  _
+                    ByVal tglTerimaSediaan As String,  _
+                    ByVal tglHasil As String,  _
+                    ByVal noPA As String,  _
+                    ByVal lokalisasi As String,  _
+                    ByVal diagnosa As String,  _
+                    ByVal bahan As String,  _
+                    ByVal makroskopik() As Byte,  _
+                    ByVal mikroskopik() As Byte,  _
+                    ByVal kesimpulan() As Byte,  _
+                    ByVal dokterPemeriksa As String) As vw_cetakhasilpatologiRow
+            Dim rowvw_cetakhasilpatologiRow As vw_cetakhasilpatologiRow = CType(Me.NewRow,vw_cetakhasilpatologiRow)
+            Dim columnValuesArray() As Object = New Object() {noRekamedis, noRegistrasiPARajal, nmPasien, jenisKelamin, tglLahir, alamat, namapetugasMedis, asalrs, asalpengirim, tglTerimaSediaan, tglHasil, noPA, lokalisasi, diagnosa, bahan, makroskopik, mikroskopik, kesimpulan, dokterPemeriksa}
+            rowvw_cetakhasilpatologiRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowvw_cetakhasilpatologiRow)
+            Return rowvw_cetakhasilpatologiRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As vw_cetakhasilpatologiDataTable = CType(MyBase.Clone,vw_cetakhasilpatologiDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New vw_cetakhasilpatologiDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnnoRekamedis = MyBase.Columns("noRekamedis")
+            Me.columnnoRegistrasiPARajal = MyBase.Columns("noRegistrasiPARajal")
+            Me.columnnmPasien = MyBase.Columns("nmPasien")
+            Me.columnjenisKelamin = MyBase.Columns("jenisKelamin")
+            Me.columntglLahir = MyBase.Columns("tglLahir")
+            Me.columnalamat = MyBase.Columns("alamat")
+            Me.columnnamapetugasMedis = MyBase.Columns("namapetugasMedis")
+            Me.columnasalrs = MyBase.Columns("asalrs")
+            Me.columnasalpengirim = MyBase.Columns("asalpengirim")
+            Me.columntglTerimaSediaan = MyBase.Columns("tglTerimaSediaan")
+            Me.columntglHasil = MyBase.Columns("tglHasil")
+            Me.columnnoPA = MyBase.Columns("noPA")
+            Me.columnlokalisasi = MyBase.Columns("lokalisasi")
+            Me.columndiagnosa = MyBase.Columns("diagnosa")
+            Me.columnbahan = MyBase.Columns("bahan")
+            Me.columnmakroskopik = MyBase.Columns("makroskopik")
+            Me.columnmikroskopik = MyBase.Columns("mikroskopik")
+            Me.columnkesimpulan = MyBase.Columns("kesimpulan")
+            Me.columndokterPemeriksa = MyBase.Columns("dokterPemeriksa")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnnoRekamedis = New Global.System.Data.DataColumn("noRekamedis", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnoRekamedis)
+            Me.columnnoRegistrasiPARajal = New Global.System.Data.DataColumn("noRegistrasiPARajal", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnoRegistrasiPARajal)
+            Me.columnnmPasien = New Global.System.Data.DataColumn("nmPasien", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnmPasien)
+            Me.columnjenisKelamin = New Global.System.Data.DataColumn("jenisKelamin", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnjenisKelamin)
+            Me.columntglLahir = New Global.System.Data.DataColumn("tglLahir", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntglLahir)
+            Me.columnalamat = New Global.System.Data.DataColumn("alamat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnalamat)
+            Me.columnnamapetugasMedis = New Global.System.Data.DataColumn("namapetugasMedis", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnamapetugasMedis)
+            Me.columnasalrs = New Global.System.Data.DataColumn("asalrs", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnasalrs)
+            Me.columnasalpengirim = New Global.System.Data.DataColumn("asalpengirim", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnasalpengirim)
+            Me.columntglTerimaSediaan = New Global.System.Data.DataColumn("tglTerimaSediaan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntglTerimaSediaan)
+            Me.columntglHasil = New Global.System.Data.DataColumn("tglHasil", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntglHasil)
+            Me.columnnoPA = New Global.System.Data.DataColumn("noPA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnoPA)
+            Me.columnlokalisasi = New Global.System.Data.DataColumn("lokalisasi", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnlokalisasi)
+            Me.columndiagnosa = New Global.System.Data.DataColumn("diagnosa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndiagnosa)
+            Me.columnbahan = New Global.System.Data.DataColumn("bahan", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnbahan)
+            Me.columnmakroskopik = New Global.System.Data.DataColumn("makroskopik", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmakroskopik)
+            Me.columnmikroskopik = New Global.System.Data.DataColumn("mikroskopik", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmikroskopik)
+            Me.columnkesimpulan = New Global.System.Data.DataColumn("kesimpulan", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnkesimpulan)
+            Me.columndokterPemeriksa = New Global.System.Data.DataColumn("dokterPemeriksa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndokterPemeriksa)
+            Me.columnnoRekamedis.AllowDBNull = false
+            Me.columnnoRekamedis.MaxLength = 30
+            Me.columnnoRegistrasiPARajal.AllowDBNull = false
+            Me.columnnoRegistrasiPARajal.MaxLength = 50
+            Me.columnnmPasien.MaxLength = 50
+            Me.columnjenisKelamin.MaxLength = 15
+            Me.columnalamat.MaxLength = 65535
+            Me.columnnamapetugasMedis.MaxLength = 50
+            Me.columnasalrs.MaxLength = 255
+            Me.columnasalpengirim.MaxLength = 255
+            Me.columntglTerimaSediaan.MaxLength = 65535
+            Me.columntglHasil.MaxLength = 65535
+            Me.columnnoPA.MaxLength = 65535
+            Me.columnlokalisasi.MaxLength = 65535
+            Me.columndiagnosa.MaxLength = 65535
+            Me.columnbahan.MaxLength = 65535
+            Me.columndokterPemeriksa.MaxLength = 50
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function Newvw_cetakhasilpatologiRow() As vw_cetakhasilpatologiRow
+            Return CType(Me.NewRow,vw_cetakhasilpatologiRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New vw_cetakhasilpatologiRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(vw_cetakhasilpatologiRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.vw_cetakhasilpatologiRowChangedEvent) Is Nothing) Then
+                RaiseEvent vw_cetakhasilpatologiRowChanged(Me, New vw_cetakhasilpatologiRowChangeEvent(CType(e.Row,vw_cetakhasilpatologiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.vw_cetakhasilpatologiRowChangingEvent) Is Nothing) Then
+                RaiseEvent vw_cetakhasilpatologiRowChanging(Me, New vw_cetakhasilpatologiRowChangeEvent(CType(e.Row,vw_cetakhasilpatologiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.vw_cetakhasilpatologiRowDeletedEvent) Is Nothing) Then
+                RaiseEvent vw_cetakhasilpatologiRowDeleted(Me, New vw_cetakhasilpatologiRowChangeEvent(CType(e.Row,vw_cetakhasilpatologiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.vw_cetakhasilpatologiRowDeletingEvent) Is Nothing) Then
+                RaiseEvent vw_cetakhasilpatologiRowDeleting(Me, New vw_cetakhasilpatologiRowChangeEvent(CType(e.Row,vw_cetakhasilpatologiRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub Removevw_cetakhasilpatologiRow(ByVal row As vw_cetakhasilpatologiRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As CetakHasilLab = New CetakHasilLab()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "vw_cetakhasilpatologiDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -4347,478 +4362,6 @@ Partial Public Class CetakHasilLab
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class vw_cetakhasilpatologiRow
-        Inherits Global.System.Data.DataRow
-        
-        Private tablevw_cetakhasilpatologi As vw_cetakhasilpatologiDataTable
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
-            MyBase.New(rb)
-            Me.tablevw_cetakhasilpatologi = CType(Me.Table,vw_cetakhasilpatologiDataTable)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property noRekamedis() As String
-            Get
-                Return CType(Me(Me.tablevw_cetakhasilpatologi.noRekamedisColumn),String)
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.noRekamedisColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property noRegistrasiPARajal() As String
-            Get
-                Return CType(Me(Me.tablevw_cetakhasilpatologi.noRegistrasiPARajalColumn),String)
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.noRegistrasiPARajalColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property nmPasien() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.nmPasienColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'nmPasien' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.nmPasienColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property jenisKelamin() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.jenisKelaminColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'jenisKelamin' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.jenisKelaminColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property tglLahir() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.tglLahirColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'tglLahir' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.tglLahirColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property alamat() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.alamatColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'alamat' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.alamatColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property namapetugasMedis() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.namapetugasMedisColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'namapetugasMedis' in table 'vw_cetakhasilpatologi' is DBNul"& _ 
-                            "l.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.namapetugasMedisColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property asalrs() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.asalrsColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'asalrs' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.asalrsColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property asalpengirim() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.asalpengirimColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'asalpengirim' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.asalpengirimColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property tglTerimaSediaan() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.tglTerimaSediaanColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'tglTerimaSediaan' in table 'vw_cetakhasilpatologi' is DBNul"& _ 
-                            "l.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.tglTerimaSediaanColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property tglHasil() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.tglHasilColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'tglHasil' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.tglHasilColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property noPA() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.noPAColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'noPA' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.noPAColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property lokalisasi() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.lokalisasiColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'lokalisasi' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.lokalisasiColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property diagnosa() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.diagnosaColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'diagnosa' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.diagnosaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property bahan() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.bahanColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'bahan' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.bahanColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property makroskopik() As Byte()
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.makroskopikColumn),Byte())
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'makroskopik' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.makroskopikColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property mikroskopik() As Byte()
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.mikroskopikColumn),Byte())
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'mikroskopik' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.mikroskopikColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property kesimpulan() As Byte()
-            Get
-                Try 
-                    Return CType(Me(Me.tablevw_cetakhasilpatologi.kesimpulanColumn),Byte())
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'kesimpulan' in table 'vw_cetakhasilpatologi' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablevw_cetakhasilpatologi.kesimpulanColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsnmPasienNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.nmPasienColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetnmPasienNull()
-            Me(Me.tablevw_cetakhasilpatologi.nmPasienColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsjenisKelaminNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.jenisKelaminColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetjenisKelaminNull()
-            Me(Me.tablevw_cetakhasilpatologi.jenisKelaminColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IstglLahirNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.tglLahirColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SettglLahirNull()
-            Me(Me.tablevw_cetakhasilpatologi.tglLahirColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsalamatNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.alamatColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetalamatNull()
-            Me(Me.tablevw_cetakhasilpatologi.alamatColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsnamapetugasMedisNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.namapetugasMedisColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetnamapetugasMedisNull()
-            Me(Me.tablevw_cetakhasilpatologi.namapetugasMedisColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsasalrsNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.asalrsColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetasalrsNull()
-            Me(Me.tablevw_cetakhasilpatologi.asalrsColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsasalpengirimNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.asalpengirimColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetasalpengirimNull()
-            Me(Me.tablevw_cetakhasilpatologi.asalpengirimColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IstglTerimaSediaanNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.tglTerimaSediaanColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SettglTerimaSediaanNull()
-            Me(Me.tablevw_cetakhasilpatologi.tglTerimaSediaanColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IstglHasilNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.tglHasilColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SettglHasilNull()
-            Me(Me.tablevw_cetakhasilpatologi.tglHasilColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsnoPANull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.noPAColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetnoPANull()
-            Me(Me.tablevw_cetakhasilpatologi.noPAColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IslokalisasiNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.lokalisasiColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetlokalisasiNull()
-            Me(Me.tablevw_cetakhasilpatologi.lokalisasiColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsdiagnosaNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.diagnosaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetdiagnosaNull()
-            Me(Me.tablevw_cetakhasilpatologi.diagnosaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsbahanNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.bahanColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetbahanNull()
-            Me(Me.tablevw_cetakhasilpatologi.bahanColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsmakroskopikNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.makroskopikColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetmakroskopikNull()
-            Me(Me.tablevw_cetakhasilpatologi.makroskopikColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsmikroskopikNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.mikroskopikColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetmikroskopikNull()
-            Me(Me.tablevw_cetakhasilpatologi.mikroskopikColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IskesimpulanNull() As Boolean
-            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.kesimpulanColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetkesimpulanNull()
-            Me(Me.tablevw_cetakhasilpatologi.kesimpulanColumn) = Global.System.Convert.DBNull
-        End Sub
-    End Class
-    
-    '''<summary>
-    '''Represents strongly named DataRow class.
-    '''</summary>
     Partial Public Class vw_pasienrawatinapRow
         Inherits Global.System.Data.DataRow
         
@@ -5886,6 +5429,506 @@ Partial Public Class CetakHasilLab
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class vw_cetakhasilpatologiRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablevw_cetakhasilpatologi As vw_cetakhasilpatologiDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablevw_cetakhasilpatologi = CType(Me.Table,vw_cetakhasilpatologiDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property noRekamedis() As String
+            Get
+                Return CType(Me(Me.tablevw_cetakhasilpatologi.noRekamedisColumn),String)
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.noRekamedisColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property noRegistrasiPARajal() As String
+            Get
+                Return CType(Me(Me.tablevw_cetakhasilpatologi.noRegistrasiPARajalColumn),String)
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.noRegistrasiPARajalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property nmPasien() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.nmPasienColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nmPasien' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.nmPasienColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property jenisKelamin() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.jenisKelaminColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'jenisKelamin' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.jenisKelaminColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property tglLahir() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.tglLahirColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'tglLahir' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.tglLahirColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property alamat() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.alamatColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'alamat' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.alamatColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property namapetugasMedis() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.namapetugasMedisColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'namapetugasMedis' in table 'vw_cetakhasilpatologi' is DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.namapetugasMedisColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property asalrs() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.asalrsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'asalrs' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.asalrsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property asalpengirim() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.asalpengirimColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'asalpengirim' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.asalpengirimColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property tglTerimaSediaan() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.tglTerimaSediaanColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'tglTerimaSediaan' in table 'vw_cetakhasilpatologi' is DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.tglTerimaSediaanColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property tglHasil() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.tglHasilColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'tglHasil' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.tglHasilColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property noPA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.noPAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'noPA' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.noPAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property lokalisasi() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.lokalisasiColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'lokalisasi' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.lokalisasiColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property diagnosa() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.diagnosaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'diagnosa' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.diagnosaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property bahan() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.bahanColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'bahan' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.bahanColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property makroskopik() As Byte()
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.makroskopikColumn),Byte())
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'makroskopik' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.makroskopikColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property mikroskopik() As Byte()
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.mikroskopikColumn),Byte())
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'mikroskopik' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.mikroskopikColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property kesimpulan() As Byte()
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.kesimpulanColumn),Byte())
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'kesimpulan' in table 'vw_cetakhasilpatologi' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.kesimpulanColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property dokterPemeriksa() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablevw_cetakhasilpatologi.dokterPemeriksaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'dokterPemeriksa' in table 'vw_cetakhasilpatologi' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablevw_cetakhasilpatologi.dokterPemeriksaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsnmPasienNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.nmPasienColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetnmPasienNull()
+            Me(Me.tablevw_cetakhasilpatologi.nmPasienColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsjenisKelaminNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.jenisKelaminColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetjenisKelaminNull()
+            Me(Me.tablevw_cetakhasilpatologi.jenisKelaminColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IstglLahirNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.tglLahirColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SettglLahirNull()
+            Me(Me.tablevw_cetakhasilpatologi.tglLahirColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsalamatNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.alamatColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetalamatNull()
+            Me(Me.tablevw_cetakhasilpatologi.alamatColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsnamapetugasMedisNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.namapetugasMedisColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetnamapetugasMedisNull()
+            Me(Me.tablevw_cetakhasilpatologi.namapetugasMedisColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsasalrsNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.asalrsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetasalrsNull()
+            Me(Me.tablevw_cetakhasilpatologi.asalrsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsasalpengirimNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.asalpengirimColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetasalpengirimNull()
+            Me(Me.tablevw_cetakhasilpatologi.asalpengirimColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IstglTerimaSediaanNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.tglTerimaSediaanColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SettglTerimaSediaanNull()
+            Me(Me.tablevw_cetakhasilpatologi.tglTerimaSediaanColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IstglHasilNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.tglHasilColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SettglHasilNull()
+            Me(Me.tablevw_cetakhasilpatologi.tglHasilColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsnoPANull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.noPAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetnoPANull()
+            Me(Me.tablevw_cetakhasilpatologi.noPAColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IslokalisasiNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.lokalisasiColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetlokalisasiNull()
+            Me(Me.tablevw_cetakhasilpatologi.lokalisasiColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsdiagnosaNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.diagnosaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetdiagnosaNull()
+            Me(Me.tablevw_cetakhasilpatologi.diagnosaColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsbahanNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.bahanColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetbahanNull()
+            Me(Me.tablevw_cetakhasilpatologi.bahanColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsmakroskopikNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.makroskopikColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetmakroskopikNull()
+            Me(Me.tablevw_cetakhasilpatologi.makroskopikColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsmikroskopikNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.mikroskopikColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetmikroskopikNull()
+            Me(Me.tablevw_cetakhasilpatologi.mikroskopikColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IskesimpulanNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.kesimpulanColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetkesimpulanNull()
+            Me(Me.tablevw_cetakhasilpatologi.kesimpulanColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsdokterPemeriksaNull() As Boolean
+            Return Me.IsNull(Me.tablevw_cetakhasilpatologi.dokterPemeriksaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetdokterPemeriksaNull()
+            Me(Me.tablevw_cetakhasilpatologi.dokterPemeriksaColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -5997,42 +6040,6 @@ Partial Public Class CetakHasilLab
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-    Public Class vw_cetakhasilpatologiRowChangeEvent
-        Inherits Global.System.EventArgs
-        
-        Private eventRow As vw_cetakhasilpatologiRow
-        
-        Private eventAction As Global.System.Data.DataRowAction
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub New(ByVal row As vw_cetakhasilpatologiRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New
-            Me.eventRow = row
-            Me.eventAction = action
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property Row() As vw_cetakhasilpatologiRow
-            Get
-                Return Me.eventRow
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
-            Get
-                Return Me.eventAction
-            End Get
-        End Property
-    End Class
-    
-    '''<summary>
-    '''Row event argument class
-    '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
     Public Class vw_pasienrawatinapRowChangeEvent
         Inherits Global.System.EventArgs
         
@@ -6051,6 +6058,42 @@ Partial Public Class CetakHasilLab
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property Row() As vw_pasienrawatinapRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    Public Class vw_cetakhasilpatologiRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As vw_cetakhasilpatologiRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New(ByVal row As vw_cetakhasilpatologiRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Row() As vw_cetakhasilpatologiRow
             Get
                 Return Me.eventRow
             End Get
@@ -6643,196 +6686,6 @@ Namespace CetakHasilLabTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class vw_cetakhasilpatologiTableAdapter
-        Inherits Global.System.ComponentModel.Component
-        
-        Private WithEvents _adapter As Global.System.Data.Odbc.OdbcDataAdapter
-        
-        Private _connection As Global.System.Data.Odbc.OdbcConnection
-        
-        Private _transaction As Global.System.Data.Odbc.OdbcTransaction
-        
-        Private _commandCollection() As Global.System.Data.Odbc.OdbcCommand
-        
-        Private _clearBeforeFill As Boolean
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.ClearBeforeFill = true
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.System.Data.Odbc.OdbcDataAdapter
-            Get
-                If (Me._adapter Is Nothing) Then
-                    Me.InitAdapter
-                End If
-                Return Me._adapter
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Friend Property Connection() As Global.System.Data.Odbc.OdbcConnection
-            Get
-                If (Me._connection Is Nothing) Then
-                    Me.InitConnection
-                End If
-                Return Me._connection
-            End Get
-            Set
-                Me._connection = value
-                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
-                    Me.Adapter.InsertCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
-                    Me.Adapter.DeleteCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
-                    Me.Adapter.UpdateCommand.Connection = value
-                End If
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.System.Data.Odbc.OdbcCommand).Connection = value
-                    End If
-                    i = (i + 1)
-                Loop
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Friend Property Transaction() As Global.System.Data.Odbc.OdbcTransaction
-            Get
-                Return Me._transaction
-            End Get
-            Set
-                Me._transaction = value
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    Me.CommandCollection(i).Transaction = Me._transaction
-                    i = (i + 1)
-                Loop
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
-                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
-                    Me.Adapter.InsertCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
-                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
-                End If
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.System.Data.Odbc.OdbcCommand()
-            Get
-                If (Me._commandCollection Is Nothing) Then
-                    Me.InitCommandCollection
-                End If
-                Return Me._commandCollection
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property ClearBeforeFill() As Boolean
-            Get
-                Return Me._clearBeforeFill
-            End Get
-            Set
-                Me._clearBeforeFill = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Private Sub InitAdapter()
-            Me._adapter = New Global.System.Data.Odbc.OdbcDataAdapter()
-            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
-            tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "vw_cetakhasilpatologi"
-            tableMapping.ColumnMappings.Add("noRekamedis", "noRekamedis")
-            tableMapping.ColumnMappings.Add("noRegistrasiPARajal", "noRegistrasiPARajal")
-            tableMapping.ColumnMappings.Add("nmPasien", "nmPasien")
-            tableMapping.ColumnMappings.Add("jenisKelamin", "jenisKelamin")
-            tableMapping.ColumnMappings.Add("tglLahir", "tglLahir")
-            tableMapping.ColumnMappings.Add("alamat", "alamat")
-            tableMapping.ColumnMappings.Add("namapetugasMedis", "namapetugasMedis")
-            tableMapping.ColumnMappings.Add("asalrs", "asalrs")
-            tableMapping.ColumnMappings.Add("asalpengirim", "asalpengirim")
-            tableMapping.ColumnMappings.Add("tglTerimaSediaan", "tglTerimaSediaan")
-            tableMapping.ColumnMappings.Add("tglHasil", "tglHasil")
-            tableMapping.ColumnMappings.Add("noPA", "noPA")
-            tableMapping.ColumnMappings.Add("lokalisasi", "lokalisasi")
-            tableMapping.ColumnMappings.Add("diagnosa", "diagnosa")
-            tableMapping.ColumnMappings.Add("bahan", "bahan")
-            tableMapping.ColumnMappings.Add("makroskopik", "makroskopik")
-            tableMapping.ColumnMappings.Add("mikroskopik", "mikroskopik")
-            tableMapping.ColumnMappings.Add("kesimpulan", "kesimpulan")
-            Me._adapter.TableMappings.Add(tableMapping)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Private Sub InitConnection()
-            Me._connection = New Global.System.Data.Odbc.OdbcConnection()
-            Me._connection.ConnectionString = Global.Rawat_Inap.My.MySettings.Default.ConnectionString
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
-            Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
-            Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT * FROM `vw_cetakhasilpatologi`"
-            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As CetakHasilLab.vw_cetakhasilpatologiDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As CetakHasilLab.vw_cetakhasilpatologiDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As CetakHasilLab.vw_cetakhasilpatologiDataTable = New CetakHasilLab.vw_cetakhasilpatologiDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the connection and commands used to retrieve and save data.
-    '''</summary>
-    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
-     Global.System.ComponentModel.ToolboxItem(true),  _
-     Global.System.ComponentModel.DataObjectAttribute(true),  _
-     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
-     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
     Partial Public Class vw_pasienrawatinapTableAdapter
         Inherits Global.System.ComponentModel.Component
         
@@ -7034,6 +6887,197 @@ Namespace CetakHasilLabTableAdapters
         Public Overloads Overridable Function GetData() As CetakHasilLab.vw_pasienrawatinapDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Dim dataTable As CetakHasilLab.vw_pasienrawatinapDataTable = New CetakHasilLab.vw_pasienrawatinapDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class vw_cetakhasilpatologiTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.Odbc.OdbcDataAdapter
+        
+        Private _connection As Global.System.Data.Odbc.OdbcConnection
+        
+        Private _transaction As Global.System.Data.Odbc.OdbcTransaction
+        
+        Private _commandCollection() As Global.System.Data.Odbc.OdbcCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.Odbc.OdbcDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.Odbc.OdbcConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.Odbc.OdbcCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.Odbc.OdbcTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.Odbc.OdbcCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.Odbc.OdbcDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "vw_cetakhasilpatologi"
+            tableMapping.ColumnMappings.Add("noRekamedis", "noRekamedis")
+            tableMapping.ColumnMappings.Add("noRegistrasiPARajal", "noRegistrasiPARajal")
+            tableMapping.ColumnMappings.Add("nmPasien", "nmPasien")
+            tableMapping.ColumnMappings.Add("jenisKelamin", "jenisKelamin")
+            tableMapping.ColumnMappings.Add("tglLahir", "tglLahir")
+            tableMapping.ColumnMappings.Add("alamat", "alamat")
+            tableMapping.ColumnMappings.Add("namapetugasMedis", "namapetugasMedis")
+            tableMapping.ColumnMappings.Add("asalrs", "asalrs")
+            tableMapping.ColumnMappings.Add("asalpengirim", "asalpengirim")
+            tableMapping.ColumnMappings.Add("tglTerimaSediaan", "tglTerimaSediaan")
+            tableMapping.ColumnMappings.Add("tglHasil", "tglHasil")
+            tableMapping.ColumnMappings.Add("noPA", "noPA")
+            tableMapping.ColumnMappings.Add("lokalisasi", "lokalisasi")
+            tableMapping.ColumnMappings.Add("diagnosa", "diagnosa")
+            tableMapping.ColumnMappings.Add("bahan", "bahan")
+            tableMapping.ColumnMappings.Add("makroskopik", "makroskopik")
+            tableMapping.ColumnMappings.Add("mikroskopik", "mikroskopik")
+            tableMapping.ColumnMappings.Add("kesimpulan", "kesimpulan")
+            tableMapping.ColumnMappings.Add("dokterPemeriksa", "dokterPemeriksa")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.Odbc.OdbcConnection()
+            Me._connection.ConnectionString = Global.Rawat_Inap.My.MySettings.Default.ConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT * FROM `vw_cetakhasilpatologi`"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As CetakHasilLab.vw_cetakhasilpatologiDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As CetakHasilLab.vw_cetakhasilpatologiDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As CetakHasilLab.vw_cetakhasilpatologiDataTable = New CetakHasilLab.vw_cetakhasilpatologiDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

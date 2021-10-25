@@ -88,7 +88,7 @@ Partial Class Pindah_Kamar
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(535, 36)
+        Me.Panel1.Size = New System.Drawing.Size(534, 36)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -99,7 +99,7 @@ Partial Class Pindah_Kamar
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(535, 36)
+        Me.Label1.Size = New System.Drawing.Size(534, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Pindah Kamar / Ruang Inap"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -113,7 +113,7 @@ Partial Class Pindah_Kamar
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 36)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(535, 518)
+        Me.Panel3.Size = New System.Drawing.Size(534, 518)
         Me.Panel3.TabIndex = 2
         '
         'btnOK
@@ -137,7 +137,7 @@ Partial Class Pindah_Kamar
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 503)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(535, 15)
+        Me.Panel2.Size = New System.Drawing.Size(534, 15)
         Me.Panel2.TabIndex = 4
         '
         'GroupBox2
@@ -170,7 +170,7 @@ Partial Class Pindah_Kamar
         Me.GroupBox2.ForeColor = System.Drawing.Color.Gray
         Me.GroupBox2.Location = New System.Drawing.Point(0, 223)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(535, 231)
+        Me.GroupBox2.Size = New System.Drawing.Size(534, 231)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Kamar Inap Tujuan"
@@ -435,7 +435,7 @@ Partial Class Pindah_Kamar
         Me.GroupBox1.ForeColor = System.Drawing.Color.Gray
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(535, 223)
+        Me.GroupBox1.Size = New System.Drawing.Size(534, 223)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Kamar Inap Sebelumnya"
@@ -633,7 +633,7 @@ Partial Class Pindah_Kamar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.GhostWhite
-        Me.ClientSize = New System.Drawing.Size(535, 554)
+        Me.ClientSize = New System.Drawing.Size(534, 554)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

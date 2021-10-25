@@ -40,6 +40,7 @@ Partial Class Gizi
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Gizi))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtRanap = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -66,6 +67,8 @@ Partial Class Gizi
         Me.ContentPanel = New System.Windows.Forms.ToolStripContentPanel()
         Me.ErKelas = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.MyGroupBox4 = New Rawat_Inap.myGroupBox()
+        Me.txtKetLain = New System.Windows.Forms.TextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
         Me.txtKdPermintaanLama = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtKelas = New System.Windows.Forms.ComboBox()
@@ -93,6 +96,7 @@ Partial Class Gizi
         Me.txtTglMasuk = New System.Windows.Forms.TextBox()
         Me.txtNoBed = New System.Windows.Forms.TextBox()
         Me.MyGroupBox5 = New Rawat_Inap.myGroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnClear2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtDiagGizi = New System.Windows.Forms.RichTextBox()
@@ -190,6 +194,7 @@ Partial Class Gizi
         Me.txtWaktu = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.picKeluar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
@@ -208,6 +213,7 @@ Partial Class Gizi
         CType(Me.ErKelas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MyGroupBox4.SuspendLayout()
         Me.MyGroupBox5.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MyGroupBox1.SuspendLayout()
         Me.MyGroupBox3.SuspendLayout()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -457,6 +463,8 @@ Partial Class Gizi
         Me.MyGroupBox4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MyGroupBox4.Controls.Add(Me.txtKetLain)
+        Me.MyGroupBox4.Controls.Add(Me.Label35)
         Me.MyGroupBox4.Controls.Add(Me.txtKdPermintaanLama)
         Me.MyGroupBox4.Controls.Add(Me.Label5)
         Me.MyGroupBox4.Controls.Add(Me.txtKelas)
@@ -492,6 +500,27 @@ Partial Class Gizi
         Me.MyGroupBox4.TabIndex = 50
         Me.MyGroupBox4.TabStop = False
         Me.MyGroupBox4.Text = "Data Rawat Inap "
+        '
+        'txtKetLain
+        '
+        Me.txtKetLain.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtKetLain.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKetLain.Location = New System.Drawing.Point(384, 100)
+        Me.txtKetLain.Multiline = True
+        Me.txtKetLain.Name = "txtKetLain"
+        Me.txtKetLain.Size = New System.Drawing.Size(200, 93)
+        Me.txtKetLain.TabIndex = 51
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.ForeColor = System.Drawing.Color.Black
+        Me.Label35.Location = New System.Drawing.Point(303, 103)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(63, 16)
+        Me.Label35.TabIndex = 50
+        Me.Label35.Text = "Ket.Lain"
         '
         'txtKdPermintaanLama
         '
@@ -530,7 +559,7 @@ Partial Class Gizi
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(303, 131)
+        Me.Label11.Location = New System.Drawing.Point(169, 174)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(60, 16)
         Me.Label11.TabIndex = 7
@@ -576,7 +605,7 @@ Partial Class Gizi
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(303, 102)
+        Me.Label10.Location = New System.Drawing.Point(4, 174)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(76, 16)
         Me.Label10.TabIndex = 6
@@ -744,7 +773,7 @@ Partial Class Gizi
         'txtNoKmr
         '
         Me.txtNoKmr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoKmr.Location = New System.Drawing.Point(384, 100)
+        Me.txtNoKmr.Location = New System.Drawing.Point(85, 172)
         Me.txtNoKmr.Name = "txtNoKmr"
         Me.txtNoKmr.Size = New System.Drawing.Size(76, 22)
         Me.txtNoKmr.TabIndex = 14
@@ -762,7 +791,7 @@ Partial Class Gizi
         'txtNoBed
         '
         Me.txtNoBed.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoBed.Location = New System.Drawing.Point(384, 128)
+        Me.txtNoBed.Location = New System.Drawing.Point(250, 171)
         Me.txtNoBed.Name = "txtNoBed"
         Me.txtNoBed.Size = New System.Drawing.Size(76, 22)
         Me.txtNoBed.TabIndex = 15
@@ -773,6 +802,8 @@ Partial Class Gizi
         Me.MyGroupBox5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MyGroupBox5.Controls.Add(Me.Label36)
+        Me.MyGroupBox5.Controls.Add(Me.PictureBox1)
         Me.MyGroupBox5.Controls.Add(Me.btnClear2)
         Me.MyGroupBox5.Controls.Add(Me.Label2)
         Me.MyGroupBox5.Controls.Add(Me.txtDiagGizi)
@@ -808,13 +839,24 @@ Partial Class Gizi
         Me.MyGroupBox5.TabStop = False
         Me.MyGroupBox5.Text = "Data Pasien "
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Rawat_Inap.My.Resources.Resources.history2
+        Me.PictureBox1.Location = New System.Drawing.Point(372, 12)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 53
+        Me.PictureBox1.TabStop = False
+        '
         'btnClear2
         '
         Me.btnClear2.BackColor = System.Drawing.Color.Crimson
         Me.btnClear2.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnClear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClear2.ForeColor = System.Drawing.Color.White
-        Me.btnClear2.Location = New System.Drawing.Point(1072, 30)
+        Me.btnClear2.Location = New System.Drawing.Point(996, 23)
         Me.btnClear2.Name = "btnClear2"
         Me.btnClear2.Size = New System.Drawing.Size(73, 35)
         Me.btnClear2.TabIndex = 49
@@ -825,7 +867,7 @@ Partial Class Gizi
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(1187, 150)
+        Me.Label2.Location = New System.Drawing.Point(916, 147)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(22, 16)
         Me.Label2.TabIndex = 44
@@ -845,7 +887,7 @@ Partial Class Gizi
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(1024, 150)
+        Me.Label14.Location = New System.Drawing.Point(753, 147)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(55, 16)
         Me.Label14.TabIndex = 43
@@ -856,7 +898,7 @@ Partial Class Gizi
         '
         Me.txtLLAPer.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtLLAPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLLAPer.Location = New System.Drawing.Point(1105, 147)
+        Me.txtLLAPer.Location = New System.Drawing.Point(834, 144)
         Me.txtLLAPer.Name = "txtLLAPer"
         Me.txtLLAPer.Size = New System.Drawing.Size(76, 22)
         Me.txtLLAPer.TabIndex = 28
@@ -884,7 +926,7 @@ Partial Class Gizi
         Me.txtIMT.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtIMT.Enabled = False
         Me.txtIMT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIMT.Location = New System.Drawing.Point(1105, 78)
+        Me.txtIMT.Location = New System.Drawing.Point(834, 75)
         Me.txtIMT.Name = "txtIMT"
         Me.txtIMT.Size = New System.Drawing.Size(76, 22)
         Me.txtIMT.TabIndex = 25
@@ -906,7 +948,7 @@ Partial Class Gizi
         '
         Me.txtBB.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtBB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBB.Location = New System.Drawing.Point(1105, 32)
+        Me.txtBB.Location = New System.Drawing.Point(834, 29)
         Me.txtBB.Name = "txtBB"
         Me.txtBB.Size = New System.Drawing.Size(76, 22)
         Me.txtBB.TabIndex = 23
@@ -928,7 +970,7 @@ Partial Class Gizi
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(1024, 81)
+        Me.Label22.Location = New System.Drawing.Point(753, 78)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(34, 16)
         Me.Label22.TabIndex = 41
@@ -949,7 +991,7 @@ Partial Class Gizi
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.Black
-        Me.Label30.Location = New System.Drawing.Point(1024, 104)
+        Me.Label30.Location = New System.Drawing.Point(753, 101)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(25, 16)
         Me.Label30.TabIndex = 28
@@ -972,7 +1014,7 @@ Partial Class Gizi
         '
         Me.Label19.AutoSize = True
         Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(1187, 127)
+        Me.Label19.Location = New System.Drawing.Point(916, 124)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(26, 16)
         Me.Label19.TabIndex = 39
@@ -994,7 +1036,7 @@ Partial Class Gizi
         '
         Me.txtLK.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtLK.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLK.Location = New System.Drawing.Point(1105, 101)
+        Me.txtLK.Location = New System.Drawing.Point(834, 98)
         Me.txtLK.Name = "txtLK"
         Me.txtLK.Size = New System.Drawing.Size(76, 22)
         Me.txtLK.TabIndex = 26
@@ -1005,7 +1047,7 @@ Partial Class Gizi
         '
         Me.txtLLA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtLLA.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLLA.Location = New System.Drawing.Point(1105, 124)
+        Me.txtLLA.Location = New System.Drawing.Point(834, 121)
         Me.txtLLA.Name = "txtLLA"
         Me.txtLLA.Size = New System.Drawing.Size(76, 22)
         Me.txtLLA.TabIndex = 27
@@ -1016,7 +1058,7 @@ Partial Class Gizi
         '
         Me.Label17.AutoSize = True
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(1187, 35)
+        Me.Label17.Location = New System.Drawing.Point(916, 32)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(23, 16)
         Me.Label17.TabIndex = 37
@@ -1028,7 +1070,7 @@ Partial Class Gizi
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(1024, 127)
+        Me.Label15.Location = New System.Drawing.Point(753, 124)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(38, 16)
         Me.Label15.TabIndex = 35
@@ -1040,7 +1082,7 @@ Partial Class Gizi
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.Black
-        Me.Label29.Location = New System.Drawing.Point(1024, 58)
+        Me.Label29.Location = New System.Drawing.Point(753, 55)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(28, 16)
         Me.Label29.TabIndex = 25
@@ -1052,7 +1094,7 @@ Partial Class Gizi
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.Black
-        Me.Label28.Location = New System.Drawing.Point(1024, 35)
+        Me.Label28.Location = New System.Drawing.Point(753, 32)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(28, 16)
         Me.Label28.TabIndex = 24
@@ -1063,7 +1105,7 @@ Partial Class Gizi
         '
         Me.Label16.AutoSize = True
         Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(1187, 58)
+        Me.Label16.Location = New System.Drawing.Point(916, 55)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(26, 16)
         Me.Label16.TabIndex = 36
@@ -1074,7 +1116,7 @@ Partial Class Gizi
         '
         Me.Label18.AutoSize = True
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(1187, 104)
+        Me.Label18.Location = New System.Drawing.Point(916, 101)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(26, 16)
         Me.Label18.TabIndex = 38
@@ -1085,7 +1127,7 @@ Partial Class Gizi
         '
         Me.txtTB.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtTB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTB.Location = New System.Drawing.Point(1105, 55)
+        Me.txtTB.Location = New System.Drawing.Point(834, 52)
         Me.txtTB.Name = "txtTB"
         Me.txtTB.Size = New System.Drawing.Size(76, 22)
         Me.txtTB.TabIndex = 24
@@ -1657,11 +1699,10 @@ Partial Class Gizi
         'btnPulang
         '
         Me.btnPulang.BackColor = System.Drawing.Color.Crimson
-        Me.btnPulang.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro
-        Me.btnPulang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy
-        Me.btnPulang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
+        Me.btnPulang.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnPulang.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPulang.ForeColor = System.Drawing.Color.White
-        Me.btnPulang.Location = New System.Drawing.Point(104, 549)
+        Me.btnPulang.Location = New System.Drawing.Point(105, 508)
         Me.btnPulang.Name = "btnPulang"
         Me.btnPulang.Size = New System.Drawing.Size(278, 35)
         Me.btnPulang.TabIndex = 51
@@ -1682,11 +1723,10 @@ Partial Class Gizi
         'btnUpdate
         '
         Me.btnUpdate.BackColor = System.Drawing.Color.SeaGreen
-        Me.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro
-        Me.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy
-        Me.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
+        Me.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(104, 508)
+        Me.btnUpdate.Location = New System.Drawing.Point(105, 467)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(278, 35)
         Me.btnUpdate.TabIndex = 50
@@ -1711,12 +1751,13 @@ Partial Class Gizi
         Me.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy
         Me.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(104, 467)
+        Me.btnEdit.Location = New System.Drawing.Point(104, 549)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(278, 35)
         Me.btnEdit.TabIndex = 49
         Me.btnEdit.Text = "Edit Permintaan"
         Me.btnEdit.UseVisualStyleBackColor = False
+        Me.btnEdit.Visible = False
         '
         'txtBtkMkn
         '
@@ -1803,9 +1844,8 @@ Partial Class Gizi
         'btnKirim
         '
         Me.btnKirim.BackColor = System.Drawing.Color.Navy
-        Me.btnKirim.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro
-        Me.btnKirim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy
-        Me.btnKirim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue
+        Me.btnKirim.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnKirim.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnKirim.ForeColor = System.Drawing.Color.White
         Me.btnKirim.Location = New System.Drawing.Point(104, 426)
         Me.btnKirim.Name = "btnKirim"
@@ -1836,7 +1876,7 @@ Partial Class Gizi
         '
         'txtTgl
         '
-        Me.txtTgl.CustomFormat = "dd-MM-yyyy"
+        Me.txtTgl.CustomFormat = "dd-MM-yyyy  HH:mm:ss"
         Me.txtTgl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTgl.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.txtTgl.Location = New System.Drawing.Point(85, 15)
@@ -1946,6 +1986,18 @@ Partial Class Gizi
         Me.Label13.TabIndex = 11
         Me.Label13.Text = "Extra Diet"
         '
+        'Label36
+        '
+        Me.Label36.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label36.ForeColor = System.Drawing.Color.DimGray
+        Me.Label36.Location = New System.Drawing.Point(1082, 19)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(182, 177)
+        Me.Label36.TabIndex = 54
+        Me.Label36.Text = "Waktu print nota makanan dari PM:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- Siang (hari ini) : " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   07:00 – 07:30" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- S" &
+    "ore (hari ini) : " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   12:00 – 12:30" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- Pagi (hari selanjutnya) : " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   13:30 – " &
+    "14:00"
+        '
         'Gizi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1957,6 +2009,7 @@ Partial Class Gizi
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Gizi"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gizi"
@@ -1980,6 +2033,7 @@ Partial Class Gizi
         Me.MyGroupBox4.PerformLayout()
         Me.MyGroupBox5.ResumeLayout(False)
         Me.MyGroupBox5.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MyGroupBox1.ResumeLayout(False)
         Me.MyGroupBox1.PerformLayout()
         Me.MyGroupBox3.ResumeLayout(False)
@@ -2151,4 +2205,8 @@ Partial Class Gizi
     Friend WithEvents Column41 As DataGridViewTextBoxColumn
     Friend WithEvents Column27 As DataGridViewButtonColumn
     Friend WithEvents Column39 As DataGridViewButtonColumn
+    Friend WithEvents txtKetLain As TextBox
+    Friend WithEvents Label35 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label36 As Label
 End Class
